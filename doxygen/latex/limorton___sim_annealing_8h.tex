@@ -1,0 +1,211 @@
+\hypertarget{limorton___sim_annealing_8h}{}\section{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+\+Sim\+Annealing.h 文件参考}
+\label{limorton___sim_annealing_8h}\index{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+\+Sim\+Annealing.\+h@{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+\+Sim\+Annealing.\+h}}
+{\ttfamily \#include \char`\"{}limorton\+\_\+\+M\+C\+M\+F.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}limorton\+\_\+dijkstra.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+limorton\+\_\+\+Sim\+Annealing.\+h 的引用(Include)关系图\+:
+% FIG 0
+此图展示该文件直接或间接的被哪些文件引用了\+:
+% FIG 1
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_anneal_parm}{Anneal\+Parm}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{limorton___sim_annealing_8h_a7794d8d3b3240b66e6c94c783de3b5db}{Set\+\_\+\+Junior} ()
+\item 
+void \hyperlink{limorton___sim_annealing_8h_a27b66bb7f9dd79307da52904ed16ef32}{Set\+\_\+\+Medium} ()
+\item 
+void \hyperlink{limorton___sim_annealing_8h_a58f0b0d7ec659853fa1efa20603f24cb}{Set\+\_\+\+Senior} ()
+\item 
+int \hyperlink{limorton___sim_annealing_8h_a9ad9c0241c6a129793eeda175385fbc7}{Count\+Not\+Visited} ()
+\begin{DoxyCompactList}\small\item\em 计算仍未访问过的结点的数量 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___sim_annealing_8h_ab3979ec4143e936e7b6b51c3b3cff418}{Dis\+Play\+Pos} (const vector$<$ int $>$ \&vec)
+\item 
+void \hyperlink{limorton___sim_annealing_8h_af188931f2ab08056e564672819d8ae70}{Dis\+Play\+Pos01} (const vector$<$ int $>$ \&vec)
+\item 
+int \hyperlink{limorton___sim_annealing_8h_a7229a744762d146a1ac58baec4867d54}{pow2n} (int n)
+\begin{DoxyCompactList}\small\item\em 求2的n次幂：\+S\+TL--- pow(2, n); \end{DoxyCompactList}\item 
+int \hyperlink{limorton___sim_annealing_8h_a7771e0502b5f3b2a874cdc31faaffb02}{to\+Int} (const vector$<$ int $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em vector$<$int$>$ 转 int \end{DoxyCompactList}\item 
+string \hyperlink{limorton___sim_annealing_8h_a3b39b2f30c60ddea5440295a14cca582}{vec\+To\+String} (const vector$<$ int $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em vector$<$int$>$ 转 string \end{DoxyCompactList}\item 
+void \hyperlink{limorton___sim_annealing_8h_af8bf0adf8de611c555e2abd5122d4cd2}{Init\+\_\+\+Ans\+Space} (const vector$<$ int $>$ \&start\+State)
+\begin{DoxyCompactList}\small\item\em 初始解空间 \end{DoxyCompactList}\item 
+int \hyperlink{limorton___sim_annealing_8h_a26a9bf07efac4b43a1c02ef4572cc705}{New\+State1} (const vector$<$ int $>$ \&not\+Servers, const vector$<$ int $>$ \&be\+Servers)
+\begin{DoxyCompactList}\small\item\em 状态产生函数1\+: step\+U个结点移动一位 \end{DoxyCompactList}\item 
+int \hyperlink{limorton___sim_annealing_8h_acb23b0ee8424c8a4807a24e2cceee5c6}{New\+State2} (const vector$<$ int $>$ \&not\+Servers, const vector$<$ int $>$ \&be\+Servers)
+\begin{DoxyCompactList}\small\item\em 状态产生函数2\+: 一个结点移动step\+U位 \end{DoxyCompactList}\item 
+int \hyperlink{limorton___sim_annealing_8h_a3c8d9cf7564f4d007c411c5509ad3743}{New\+State3} (const vector$<$ int $>$ \&not\+Servers, const vector$<$ int $>$ \&be\+Servers)
+\begin{DoxyCompactList}\small\item\em 状态产生函数3\+: 多个结点移动step\+U位 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___sim_annealing_8h_aff1623313a47c53defd9849eb747f9a9}{One\+SA} (int stepU, int stay\+Max, int loop, int t\+\_\+start, double pick\+\_\+start, int change\+Kind, int change\+Num)
+\begin{DoxyCompactList}\small\item\em 单次模拟退火 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___sim_annealing_8h_a43fff2a631487feb2b1e9ae7c20f65d3}{Sim\+Anneal} (const vector$<$ int $>$ \&start\+State)
+\begin{DoxyCompactList}\small\item\em S\+A过程 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{limorton___sim_annealing_8h_a948966f430f0a8af51446bfa60c7f259}{Junior\+\_\+\+N\+UM} = 250
+\item 
+const int \hyperlink{limorton___sim_annealing_8h_adc3b4a54a626748689b5aa2f26fe163e}{Medium\+\_\+\+N\+UM} = 550
+\end{DoxyCompactItemize}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{limorton___sim_annealing_8h_a9ad9c0241c6a129793eeda175385fbc7}\label{limorton___sim_annealing_8h_a9ad9c0241c6a129793eeda175385fbc7}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!Count\+Not\+Visited@{Count\+Not\+Visited}}
+\index{Count\+Not\+Visited@{Count\+Not\+Visited}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{Count\+Not\+Visited()}{CountNotVisited()}}
+{\footnotesize\ttfamily int Count\+Not\+Visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+计算仍未访问过的结点的数量 
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_ab3979ec4143e936e7b6b51c3b3cff418}\label{limorton___sim_annealing_8h_ab3979ec4143e936e7b6b51c3b3cff418}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!Dis\+Play\+Pos@{Dis\+Play\+Pos}}
+\index{Dis\+Play\+Pos@{Dis\+Play\+Pos}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{Dis\+Play\+Pos()}{DisPlayPos()}}
+{\footnotesize\ttfamily void Dis\+Play\+Pos (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_af188931f2ab08056e564672819d8ae70}\label{limorton___sim_annealing_8h_af188931f2ab08056e564672819d8ae70}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!Dis\+Play\+Pos01@{Dis\+Play\+Pos01}}
+\index{Dis\+Play\+Pos01@{Dis\+Play\+Pos01}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{Dis\+Play\+Pos01()}{DisPlayPos01()}}
+{\footnotesize\ttfamily void Dis\+Play\+Pos01 (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_af8bf0adf8de611c555e2abd5122d4cd2}\label{limorton___sim_annealing_8h_af8bf0adf8de611c555e2abd5122d4cd2}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!Init\+\_\+\+Ans\+Space@{Init\+\_\+\+Ans\+Space}}
+\index{Init\+\_\+\+Ans\+Space@{Init\+\_\+\+Ans\+Space}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{Init\+\_\+\+Ans\+Space()}{Init\_AnsSpace()}}
+{\footnotesize\ttfamily void Init\+\_\+\+Ans\+Space (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{start\+State }\end{DoxyParamCaption})}
+
+
+
+初始解空间 
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_a26a9bf07efac4b43a1c02ef4572cc705}\label{limorton___sim_annealing_8h_a26a9bf07efac4b43a1c02ef4572cc705}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!New\+State1@{New\+State1}}
+\index{New\+State1@{New\+State1}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{New\+State1()}{NewState1()}}
+{\footnotesize\ttfamily int New\+State1 (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{not\+Servers,  }\item[{const vector$<$ int $>$ \&}]{be\+Servers }\end{DoxyParamCaption})}
+
+
+
+状态产生函数1\+: step\+U个结点移动一位 
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_acb23b0ee8424c8a4807a24e2cceee5c6}\label{limorton___sim_annealing_8h_acb23b0ee8424c8a4807a24e2cceee5c6}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!New\+State2@{New\+State2}}
+\index{New\+State2@{New\+State2}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{New\+State2()}{NewState2()}}
+{\footnotesize\ttfamily int New\+State2 (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{not\+Servers,  }\item[{const vector$<$ int $>$ \&}]{be\+Servers }\end{DoxyParamCaption})}
+
+
+
+状态产生函数2\+: 一个结点移动step\+U位 
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_a3c8d9cf7564f4d007c411c5509ad3743}\label{limorton___sim_annealing_8h_a3c8d9cf7564f4d007c411c5509ad3743}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!New\+State3@{New\+State3}}
+\index{New\+State3@{New\+State3}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{New\+State3()}{NewState3()}}
+{\footnotesize\ttfamily int New\+State3 (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{not\+Servers,  }\item[{const vector$<$ int $>$ \&}]{be\+Servers }\end{DoxyParamCaption})}
+
+
+
+状态产生函数3\+: 多个结点移动step\+U位 
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_aff1623313a47c53defd9849eb747f9a9}\label{limorton___sim_annealing_8h_aff1623313a47c53defd9849eb747f9a9}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!One\+SA@{One\+SA}}
+\index{One\+SA@{One\+SA}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{One\+S\+A()}{OneSA()}}
+{\footnotesize\ttfamily void One\+SA (\begin{DoxyParamCaption}\item[{int}]{stepU,  }\item[{int}]{stay\+Max,  }\item[{int}]{loop,  }\item[{int}]{t\+\_\+start,  }\item[{double}]{pick\+\_\+start,  }\item[{int}]{change\+Kind,  }\item[{int}]{change\+Num }\end{DoxyParamCaption})}
+
+
+
+单次模拟退火 
+
+Metropolis 准则
+
+T 更新公式 \mbox{\Hypertarget{limorton___sim_annealing_8h_a7229a744762d146a1ac58baec4867d54}\label{limorton___sim_annealing_8h_a7229a744762d146a1ac58baec4867d54}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!pow2n@{pow2n}}
+\index{pow2n@{pow2n}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{pow2n()}{pow2n()}}
+{\footnotesize\ttfamily int pow2n (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+求2的n次幂：\+S\+TL--- pow(2, n); 
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_a7794d8d3b3240b66e6c94c783de3b5db}\label{limorton___sim_annealing_8h_a7794d8d3b3240b66e6c94c783de3b5db}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!Set\+\_\+\+Junior@{Set\+\_\+\+Junior}}
+\index{Set\+\_\+\+Junior@{Set\+\_\+\+Junior}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{Set\+\_\+\+Junior()}{Set\_Junior()}}
+{\footnotesize\ttfamily void Set\+\_\+\+Junior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_a27b66bb7f9dd79307da52904ed16ef32}\label{limorton___sim_annealing_8h_a27b66bb7f9dd79307da52904ed16ef32}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!Set\+\_\+\+Medium@{Set\+\_\+\+Medium}}
+\index{Set\+\_\+\+Medium@{Set\+\_\+\+Medium}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{Set\+\_\+\+Medium()}{Set\_Medium()}}
+{\footnotesize\ttfamily void Set\+\_\+\+Medium (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_a58f0b0d7ec659853fa1efa20603f24cb}\label{limorton___sim_annealing_8h_a58f0b0d7ec659853fa1efa20603f24cb}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!Set\+\_\+\+Senior@{Set\+\_\+\+Senior}}
+\index{Set\+\_\+\+Senior@{Set\+\_\+\+Senior}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{Set\+\_\+\+Senior()}{Set\_Senior()}}
+{\footnotesize\ttfamily void Set\+\_\+\+Senior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_a43fff2a631487feb2b1e9ae7c20f65d3}\label{limorton___sim_annealing_8h_a43fff2a631487feb2b1e9ae7c20f65d3}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!Sim\+Anneal@{Sim\+Anneal}}
+\index{Sim\+Anneal@{Sim\+Anneal}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{Sim\+Anneal()}{SimAnneal()}}
+{\footnotesize\ttfamily void Sim\+Anneal (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{start\+State }\end{DoxyParamCaption})}
+
+
+
+S\+A过程 
+
+回温公式 \mbox{\Hypertarget{limorton___sim_annealing_8h_a7771e0502b5f3b2a874cdc31faaffb02}\label{limorton___sim_annealing_8h_a7771e0502b5f3b2a874cdc31faaffb02}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!to\+Int@{to\+Int}}
+\index{to\+Int@{to\+Int}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{to\+Int()}{toInt()}}
+{\footnotesize\ttfamily int to\+Int (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+vector$<$int$>$ 转 int 
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_a3b39b2f30c60ddea5440295a14cca582}\label{limorton___sim_annealing_8h_a3b39b2f30c60ddea5440295a14cca582}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!vec\+To\+String@{vec\+To\+String}}
+\index{vec\+To\+String@{vec\+To\+String}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{vec\+To\+String()}{vecToString()}}
+{\footnotesize\ttfamily string vec\+To\+String (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+vector$<$int$>$ 转 string 
+
+
+
+\subsection{变量说明}
+\mbox{\Hypertarget{limorton___sim_annealing_8h_a948966f430f0a8af51446bfa60c7f259}\label{limorton___sim_annealing_8h_a948966f430f0a8af51446bfa60c7f259}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!Junior\+\_\+\+N\+UM@{Junior\+\_\+\+N\+UM}}
+\index{Junior\+\_\+\+N\+UM@{Junior\+\_\+\+N\+UM}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{Junior\+\_\+\+N\+UM}{Junior\_NUM}}
+{\footnotesize\ttfamily const int Junior\+\_\+\+N\+UM = 250}
+
+\mbox{\Hypertarget{limorton___sim_annealing_8h_adc3b4a54a626748689b5aa2f26fe163e}\label{limorton___sim_annealing_8h_adc3b4a54a626748689b5aa2f26fe163e}} 
+\index{limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}!Medium\+\_\+\+N\+UM@{Medium\+\_\+\+N\+UM}}
+\index{Medium\+\_\+\+N\+UM@{Medium\+\_\+\+N\+UM}!limorton\+\_\+\+Sim\+Annealing.\+h@{limorton\+\_\+\+Sim\+Annealing.\+h}}
+\subsubsection{\texorpdfstring{Medium\+\_\+\+N\+UM}{Medium\_NUM}}
+{\footnotesize\ttfamily const int Medium\+\_\+\+N\+UM = 550}
+

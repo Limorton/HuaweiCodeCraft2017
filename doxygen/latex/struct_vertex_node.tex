@@ -1,0 +1,93 @@
+\hypertarget{struct_vertex_node}{}\section{Vertex\+Node结构体 参考}
+\label{struct_vertex_node}\index{Vertex\+Node@{Vertex\+Node}}
+
+
+结点结构  
+
+
+
+
+{\ttfamily \#include $<$limorton\+\_\+\+Graph.\+h$>$}
+
+
+
+Vertex\+Node 的协作图\+:
+% FIG 0
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{limorton___graph_8h_a1b1a96beadaa686056e47989bf2a037e}{Node\+Type} \hyperlink{struct_vertex_node_a8c01ecf76399486e77309782e823d626}{node\+ID}
+\item 
+int \hyperlink{struct_vertex_node_adda4124beb2560e0ba9bf5bc47e2739a}{edge\+Attached}
+\item 
+int \hyperlink{struct_vertex_node_a6505db224a0d8e3cf29210d34ea8e541}{max\+Flux}
+\item 
+int \hyperlink{struct_vertex_node_a0b6c06ef71910aa0a91bd84f9c8f097b}{sum\+\_\+rent}
+\item 
+bool \hyperlink{struct_vertex_node_a014dc41c172b3e0f3b5e46bd62e42645}{set\+Server}
+\item 
+int \hyperlink{struct_vertex_node_a0bf361db57fb08db6b56e51ddbccb786}{min\+SA}
+\item 
+\hyperlink{struct_edge_node}{Edge\+Node} $\ast$ \hyperlink{struct_vertex_node_acacdd3f9e46d406f3a9d4ba9fd76e916}{in\+Edge\+Tails}
+\item 
+\hyperlink{struct_edge_node}{Edge\+Node} $\ast$ \hyperlink{struct_vertex_node_ac87a45b986765eaa9af84f281e9f736f}{out\+Edge\+Tails}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+结点结构 
+
+\subsection{类成员变量说明}
+\mbox{\Hypertarget{struct_vertex_node_adda4124beb2560e0ba9bf5bc47e2739a}\label{struct_vertex_node_adda4124beb2560e0ba9bf5bc47e2739a}} 
+\index{Vertex\+Node@{Vertex\+Node}!edge\+Attached@{edge\+Attached}}
+\index{edge\+Attached@{edge\+Attached}!Vertex\+Node@{Vertex\+Node}}
+\subsubsection{\texorpdfstring{edge\+Attached}{edgeAttached}}
+{\footnotesize\ttfamily int Vertex\+Node\+::edge\+Attached}
+
+\mbox{\Hypertarget{struct_vertex_node_acacdd3f9e46d406f3a9d4ba9fd76e916}\label{struct_vertex_node_acacdd3f9e46d406f3a9d4ba9fd76e916}} 
+\index{Vertex\+Node@{Vertex\+Node}!in\+Edge\+Tails@{in\+Edge\+Tails}}
+\index{in\+Edge\+Tails@{in\+Edge\+Tails}!Vertex\+Node@{Vertex\+Node}}
+\subsubsection{\texorpdfstring{in\+Edge\+Tails}{inEdgeTails}}
+{\footnotesize\ttfamily \hyperlink{struct_edge_node}{Edge\+Node}$\ast$ Vertex\+Node\+::in\+Edge\+Tails}
+
+\mbox{\Hypertarget{struct_vertex_node_a6505db224a0d8e3cf29210d34ea8e541}\label{struct_vertex_node_a6505db224a0d8e3cf29210d34ea8e541}} 
+\index{Vertex\+Node@{Vertex\+Node}!max\+Flux@{max\+Flux}}
+\index{max\+Flux@{max\+Flux}!Vertex\+Node@{Vertex\+Node}}
+\subsubsection{\texorpdfstring{max\+Flux}{maxFlux}}
+{\footnotesize\ttfamily int Vertex\+Node\+::max\+Flux}
+
+\mbox{\Hypertarget{struct_vertex_node_a0bf361db57fb08db6b56e51ddbccb786}\label{struct_vertex_node_a0bf361db57fb08db6b56e51ddbccb786}} 
+\index{Vertex\+Node@{Vertex\+Node}!min\+SA@{min\+SA}}
+\index{min\+SA@{min\+SA}!Vertex\+Node@{Vertex\+Node}}
+\subsubsection{\texorpdfstring{min\+SA}{minSA}}
+{\footnotesize\ttfamily int Vertex\+Node\+::min\+SA}
+
+\mbox{\Hypertarget{struct_vertex_node_a8c01ecf76399486e77309782e823d626}\label{struct_vertex_node_a8c01ecf76399486e77309782e823d626}} 
+\index{Vertex\+Node@{Vertex\+Node}!node\+ID@{node\+ID}}
+\index{node\+ID@{node\+ID}!Vertex\+Node@{Vertex\+Node}}
+\subsubsection{\texorpdfstring{node\+ID}{nodeID}}
+{\footnotesize\ttfamily \hyperlink{limorton___graph_8h_a1b1a96beadaa686056e47989bf2a037e}{Node\+Type} Vertex\+Node\+::node\+ID}
+
+\mbox{\Hypertarget{struct_vertex_node_ac87a45b986765eaa9af84f281e9f736f}\label{struct_vertex_node_ac87a45b986765eaa9af84f281e9f736f}} 
+\index{Vertex\+Node@{Vertex\+Node}!out\+Edge\+Tails@{out\+Edge\+Tails}}
+\index{out\+Edge\+Tails@{out\+Edge\+Tails}!Vertex\+Node@{Vertex\+Node}}
+\subsubsection{\texorpdfstring{out\+Edge\+Tails}{outEdgeTails}}
+{\footnotesize\ttfamily \hyperlink{struct_edge_node}{Edge\+Node}$\ast$ Vertex\+Node\+::out\+Edge\+Tails}
+
+\mbox{\Hypertarget{struct_vertex_node_a014dc41c172b3e0f3b5e46bd62e42645}\label{struct_vertex_node_a014dc41c172b3e0f3b5e46bd62e42645}} 
+\index{Vertex\+Node@{Vertex\+Node}!set\+Server@{set\+Server}}
+\index{set\+Server@{set\+Server}!Vertex\+Node@{Vertex\+Node}}
+\subsubsection{\texorpdfstring{set\+Server}{setServer}}
+{\footnotesize\ttfamily bool Vertex\+Node\+::set\+Server}
+
+\mbox{\Hypertarget{struct_vertex_node_a0b6c06ef71910aa0a91bd84f9c8f097b}\label{struct_vertex_node_a0b6c06ef71910aa0a91bd84f9c8f097b}} 
+\index{Vertex\+Node@{Vertex\+Node}!sum\+\_\+rent@{sum\+\_\+rent}}
+\index{sum\+\_\+rent@{sum\+\_\+rent}!Vertex\+Node@{Vertex\+Node}}
+\subsubsection{\texorpdfstring{sum\+\_\+rent}{sum\_rent}}
+{\footnotesize\ttfamily int Vertex\+Node\+::sum\+\_\+rent}
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/\hyperlink{limorton___graph_8h}{limorton\+\_\+\+Graph.\+h}\end{DoxyCompactItemize}

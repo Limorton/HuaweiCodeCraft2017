@@ -1,0 +1,117 @@
+\hypertarget{struct_video_net_graph}{}\section{Video\+Net\+Graph结构体 参考}
+\label{struct_video_net_graph}\index{Video\+Net\+Graph@{Video\+Net\+Graph}}
+
+
+全图结构  
+
+
+
+
+{\ttfamily \#include $<$limorton\+\_\+\+Graph.\+h$>$}
+
+
+
+Video\+Net\+Graph 的协作图\+:
+% FIG 0
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct_video_net_graph_aa28dbb6f5bba2d61fd8e2639151d7b73}{node\+Num}
+\item 
+int \hyperlink{struct_video_net_graph_ac15308be07d7bc70a102bf653efa8226}{edge\+Num}
+\item 
+int \hyperlink{struct_video_net_graph_a83888f89f10ea54a23062f8a2e183b40}{cust\+Num}
+\item 
+int \hyperlink{struct_video_net_graph_a9b9eb7b8ecf68a7bc4fd2d3f1ebaf610}{server\+Cost}
+\item 
+int \hyperlink{struct_video_net_graph_a0d2edc53678532a3d23607ee07d7eb7e}{avg\+Rent}
+\item 
+int \hyperlink{struct_video_net_graph_aa16d8259fa0cdec0afd8bd88a4a9dc6e}{avg\+Band}
+\item 
+int \hyperlink{struct_video_net_graph_aca35568b865f13bd5bf101be77d0e87b}{avg\+Need}
+\item 
+int \hyperlink{struct_video_net_graph_ac2768170269e6989614cf28e576a814a}{guess\+Ser\+Num}
+\item 
+int \hyperlink{struct_video_net_graph_a4f8831f55885d08ebec1886e025115c6}{dir\+Cost}
+\item 
+vector$<$ \hyperlink{struct_vertex_node}{Vertex\+Node} $>$ \hyperlink{struct_video_net_graph_ac38cc11712995b947bb7f0550a718bbc}{adj\+List}
+\item 
+vector$<$ \hyperlink{struct_customer}{Customer} $>$ \hyperlink{struct_video_net_graph_a0fbde9715efc15015e49ee40a6706a9f}{customer\+Info}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+全图结构 
+
+\subsection{类成员变量说明}
+\mbox{\Hypertarget{struct_video_net_graph_ac38cc11712995b947bb7f0550a718bbc}\label{struct_video_net_graph_ac38cc11712995b947bb7f0550a718bbc}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!adj\+List@{adj\+List}}
+\index{adj\+List@{adj\+List}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{adj\+List}{adjList}}
+{\footnotesize\ttfamily vector$<$\hyperlink{struct_vertex_node}{Vertex\+Node}$>$ Video\+Net\+Graph\+::adj\+List}
+
+\mbox{\Hypertarget{struct_video_net_graph_aa16d8259fa0cdec0afd8bd88a4a9dc6e}\label{struct_video_net_graph_aa16d8259fa0cdec0afd8bd88a4a9dc6e}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!avg\+Band@{avg\+Band}}
+\index{avg\+Band@{avg\+Band}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{avg\+Band}{avgBand}}
+{\footnotesize\ttfamily int Video\+Net\+Graph\+::avg\+Band}
+
+\mbox{\Hypertarget{struct_video_net_graph_aca35568b865f13bd5bf101be77d0e87b}\label{struct_video_net_graph_aca35568b865f13bd5bf101be77d0e87b}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!avg\+Need@{avg\+Need}}
+\index{avg\+Need@{avg\+Need}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{avg\+Need}{avgNeed}}
+{\footnotesize\ttfamily int Video\+Net\+Graph\+::avg\+Need}
+
+\mbox{\Hypertarget{struct_video_net_graph_a0d2edc53678532a3d23607ee07d7eb7e}\label{struct_video_net_graph_a0d2edc53678532a3d23607ee07d7eb7e}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!avg\+Rent@{avg\+Rent}}
+\index{avg\+Rent@{avg\+Rent}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{avg\+Rent}{avgRent}}
+{\footnotesize\ttfamily int Video\+Net\+Graph\+::avg\+Rent}
+
+\mbox{\Hypertarget{struct_video_net_graph_a83888f89f10ea54a23062f8a2e183b40}\label{struct_video_net_graph_a83888f89f10ea54a23062f8a2e183b40}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!cust\+Num@{cust\+Num}}
+\index{cust\+Num@{cust\+Num}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{cust\+Num}{custNum}}
+{\footnotesize\ttfamily int Video\+Net\+Graph\+::cust\+Num}
+
+\mbox{\Hypertarget{struct_video_net_graph_a0fbde9715efc15015e49ee40a6706a9f}\label{struct_video_net_graph_a0fbde9715efc15015e49ee40a6706a9f}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!customer\+Info@{customer\+Info}}
+\index{customer\+Info@{customer\+Info}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{customer\+Info}{customerInfo}}
+{\footnotesize\ttfamily vector$<$\hyperlink{struct_customer}{Customer}$>$ Video\+Net\+Graph\+::customer\+Info}
+
+\mbox{\Hypertarget{struct_video_net_graph_a4f8831f55885d08ebec1886e025115c6}\label{struct_video_net_graph_a4f8831f55885d08ebec1886e025115c6}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!dir\+Cost@{dir\+Cost}}
+\index{dir\+Cost@{dir\+Cost}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{dir\+Cost}{dirCost}}
+{\footnotesize\ttfamily int Video\+Net\+Graph\+::dir\+Cost}
+
+\mbox{\Hypertarget{struct_video_net_graph_ac15308be07d7bc70a102bf653efa8226}\label{struct_video_net_graph_ac15308be07d7bc70a102bf653efa8226}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!edge\+Num@{edge\+Num}}
+\index{edge\+Num@{edge\+Num}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{edge\+Num}{edgeNum}}
+{\footnotesize\ttfamily int Video\+Net\+Graph\+::edge\+Num}
+
+\mbox{\Hypertarget{struct_video_net_graph_ac2768170269e6989614cf28e576a814a}\label{struct_video_net_graph_ac2768170269e6989614cf28e576a814a}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!guess\+Ser\+Num@{guess\+Ser\+Num}}
+\index{guess\+Ser\+Num@{guess\+Ser\+Num}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{guess\+Ser\+Num}{guessSerNum}}
+{\footnotesize\ttfamily int Video\+Net\+Graph\+::guess\+Ser\+Num}
+
+\mbox{\Hypertarget{struct_video_net_graph_aa28dbb6f5bba2d61fd8e2639151d7b73}\label{struct_video_net_graph_aa28dbb6f5bba2d61fd8e2639151d7b73}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!node\+Num@{node\+Num}}
+\index{node\+Num@{node\+Num}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{node\+Num}{nodeNum}}
+{\footnotesize\ttfamily int Video\+Net\+Graph\+::node\+Num}
+
+\mbox{\Hypertarget{struct_video_net_graph_a9b9eb7b8ecf68a7bc4fd2d3f1ebaf610}\label{struct_video_net_graph_a9b9eb7b8ecf68a7bc4fd2d3f1ebaf610}} 
+\index{Video\+Net\+Graph@{Video\+Net\+Graph}!server\+Cost@{server\+Cost}}
+\index{server\+Cost@{server\+Cost}!Video\+Net\+Graph@{Video\+Net\+Graph}}
+\subsubsection{\texorpdfstring{server\+Cost}{serverCost}}
+{\footnotesize\ttfamily int Video\+Net\+Graph\+::server\+Cost}
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/\hyperlink{limorton___graph_8h}{limorton\+\_\+\+Graph.\+h}\end{DoxyCompactItemize}

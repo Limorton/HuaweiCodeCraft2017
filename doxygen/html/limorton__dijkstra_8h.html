@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: H:/Limorton&#39;s Code/HUAWEI/limorton_dijkstra.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84e7a5db4faa3bb3efa0834f14a17625.html">H:</a></li><li class="navelem"><a class="el" href="dir_5ee327bd28d0005262fd55b01f6dc867.html">Limorton&#39;s Code</a></li><li class="navelem"><a class="el" href="dir_0b23d9f944b3db037a33b0ca33d66994.html">HUAWEI</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">limorton_dijkstra.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="limorton___graph_8h_source.html">limorton_Graph.h</a>&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;queue&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+limorton_dijkstra.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="limorton__dijkstra_8h__incl.png" border="0" usemap="#_h_1_2_limorton's_01_code_2_h_u_a_w_e_i_2limorton__dijkstra_8h" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="limorton__dijkstra_8h__dep__incl.png" border="0" usemap="#_h_1_2_limorton's_01_code_2_h_u_a_w_e_i_2limorton__dijkstra_8hdep" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="limorton__dijkstra_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmin__path.html">min_path</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcmp2node.html">cmp2node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">比较两条链路租金，找较小的  <a href="structcmp2node.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ab73b756a9571f83eaa1ba2679ebd0d28"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#ab73b756a9571f83eaa1ba2679ebd0d28">minAB</a> (int a, int b)</td></tr>
+<tr class="separator:ab73b756a9571f83eaa1ba2679ebd0d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4408e16e6f56f3f253368efae20a1462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a4408e16e6f56f3f253368efae20a1462">Dfs_CutEdge</a> (int cur, int father)</td></tr>
+<tr class="memdesc:a4408e16e6f56f3f253368efae20a1462"><td class="mdescLeft">&#160;</td><td class="mdescRight">用Tarjan算法求图的割边  <a href="#a4408e16e6f56f3f253368efae20a1462">更多...</a><br /></td></tr>
+<tr class="separator:a4408e16e6f56f3f253368efae20a1462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a975e251b27f292f638e594e08a5e6db7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a975e251b27f292f638e594e08a5e6db7">Init_Global_Variable</a> ()</td></tr>
+<tr class="separator:a975e251b27f292f638e594e08a5e6db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e30b637b0f5c03e43cdb05fe10a457d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a2e30b637b0f5c03e43cdb05fe10a457d">Reset_Variable</a> ()</td></tr>
+<tr class="separator:a2e30b637b0f5c03e43cdb05fe10a457d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ca4aa24096da2049e401e440aaecfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#af1ca4aa24096da2049e401e440aaecfc">Dijkstra</a> (const <a class="el" href="struct_customer.html">Customer</a> &amp;start)</td></tr>
+<tr class="separator:af1ca4aa24096da2049e401e440aaecfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc1bb62c77495116243347748bd006df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#adc1bb62c77495116243347748bd006df">Run_Dijkstra</a> (const vector&lt; int &gt; &amp;beCustSer)</td></tr>
+<tr class="separator:adc1bb62c77495116243347748bd006df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a058885b5a319f595c83afa0d4c3cdc85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a058885b5a319f595c83afa0d4c3cdc85">NotCusttoNode</a> (int nodeNum)</td></tr>
+<tr class="memdesc:a058885b5a319f595c83afa0d4c3cdc85"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断是否是消费结点连接的结点  <a href="#a058885b5a319f595c83afa0d4c3cdc85">更多...</a><br /></td></tr>
+<tr class="separator:a058885b5a319f595c83afa0d4c3cdc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6c48bfcf9ce05f235dfc14d2600a81"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#add6c48bfcf9ce05f235dfc14d2600a81">CountNearServer</a> (int nodeNum)</td></tr>
+<tr class="memdesc:add6c48bfcf9ce05f235dfc14d2600a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">求附近已设置服务器的结点的数量  <a href="#add6c48bfcf9ce05f235dfc14d2600a81">更多...</a><br /></td></tr>
+<tr class="separator:add6c48bfcf9ce05f235dfc14d2600a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12b86623d35d3624e6d93da19233fb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#ac12b86623d35d3624e6d93da19233fb0">Cust_Connect</a> (int nodeNum)</td></tr>
+<tr class="memdesc:ac12b86623d35d3624e6d93da19233fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">由网络节点求其连接的消费结点  <a href="#ac12b86623d35d3624e6d93da19233fb0">更多...</a><br /></td></tr>
+<tr class="separator:ac12b86623d35d3624e6d93da19233fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2c1c7b9f75da57d5b71fcc2c3c6bda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a3d2c1c7b9f75da57d5b71fcc2c3c6bda">Only_One_Edge</a> (int nodeNum)</td></tr>
+<tr class="memdesc:a3d2c1c7b9f75da57d5b71fcc2c3c6bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">启发式：当一个网络结点仅有一条出边，且无消费结点连接时,一定不会是服务器结点  <a href="#a3d2c1c7b9f75da57d5b71fcc2c3c6bda">更多...</a><br /></td></tr>
+<tr class="separator:a3d2c1c7b9f75da57d5b71fcc2c3c6bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fdc497b6ac1986b36ac494861e737f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a5fdc497b6ac1986b36ac494861e737f9">Flux_Over_Flow</a> (int customNum)</td></tr>
+<tr class="separator:a5fdc497b6ac1986b36ac494861e737f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668fd9c729dd06e718bfc79479bf6c26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a668fd9c729dd06e718bfc79479bf6c26">Cost_Bigger_Node</a> (int custNum)</td></tr>
+<tr class="memdesc:a668fd9c729dd06e718bfc79479bf6c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">启发式：需求不超带宽的前提下，可能的最小流量花销大于单个服务器安装费用  <a href="#a668fd9c729dd06e718bfc79479bf6c26">更多...</a><br /></td></tr>
+<tr class="separator:a668fd9c729dd06e718bfc79479bf6c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8b73d5ea5fbf33014295180a6291df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a3e8b73d5ea5fbf33014295180a6291df">Paint_Node</a> (int nodeNum)</td></tr>
+<tr class="memdesc:a3e8b73d5ea5fbf33014295180a6291df"><td class="mdescLeft">&#160;</td><td class="mdescRight">为结点着色  <a href="#a3e8b73d5ea5fbf33014295180a6291df">更多...</a><br /></td></tr>
+<tr class="separator:a3e8b73d5ea5fbf33014295180a6291df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4213f22d050d7b8836cafead983a7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a1f4213f22d050d7b8836cafead983a7d">hasCust</a> (int color)</td></tr>
+<tr class="memdesc:a1f4213f22d050d7b8836cafead983a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断color的结点集合是否有服务器  <a href="#a1f4213f22d050d7b8836cafead983a7d">更多...</a><br /></td></tr>
+<tr class="separator:a1f4213f22d050d7b8836cafead983a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a910599af1f8c1ff8f4a5fddb86c37906"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a910599af1f8c1ff8f4a5fddb86c37906">Find_Lonely_Node</a> ()</td></tr>
+<tr class="memdesc:a910599af1f8c1ff8f4a5fddb86c37906"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除孤立结点的边，并返回孤立结点集合  <a href="#a910599af1f8c1ff8f4a5fddb86c37906">更多...</a><br /></td></tr>
+<tr class="separator:a910599af1f8c1ff8f4a5fddb86c37906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6a51ee6d4a0aa9e1909d71510c046b"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#afe6a51ee6d4a0aa9e1909d71510c046b">Find_Be_Node</a> ()</td></tr>
+<tr class="memdesc:afe6a51ee6d4a0aa9e1909d71510c046b"><td class="mdescLeft">&#160;</td><td class="mdescRight">找到必就近设服务器的消费结点，并返回对应连接结点编号集合  <a href="#afe6a51ee6d4a0aa9e1909d71510c046b">更多...</a><br /></td></tr>
+<tr class="separator:afe6a51ee6d4a0aa9e1909d71510c046b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a9ae35388abf14abc064d0f3cae205"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a65a9ae35388abf14abc064d0f3cae205">Find_Be_Cust</a> (const vector&lt; int &gt; &amp;beServers)</td></tr>
+<tr class="memdesc:a65a9ae35388abf14abc064d0f3cae205"><td class="mdescLeft">&#160;</td><td class="mdescRight">找到必就近设服务器的消费结点，并返回消费结点编号集合  <a href="#a65a9ae35388abf14abc064d0f3cae205">更多...</a><br /></td></tr>
+<tr class="separator:a65a9ae35388abf14abc064d0f3cae205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a750b5d744c39a06bfb13e6eb010e35d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> = 0</td></tr>
+<tr class="separator:a750b5d744c39a06bfb13e6eb010e35d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73002ae626d985c25366a1ba4641fcc2"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton__dijkstra_8h.html#a73002ae626d985c25366a1ba4641fcc2">flags</a></td></tr>
+<tr class="separator:a73002ae626d985c25366a1ba4641fcc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a668fd9c729dd06e718bfc79479bf6c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a668fd9c729dd06e718bfc79479bf6c26">&#9670;&nbsp;</a></span>Cost_Bigger_Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Cost_Bigger_Node </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>custNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启发式：需求不超带宽的前提下，可能的最小流量花销大于单个服务器安装费用 </p>
+
+</div>
+</div>
+<a id="add6c48bfcf9ce05f235dfc14d2600a81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add6c48bfcf9ce05f235dfc14d2600a81">&#9670;&nbsp;</a></span>CountNearServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CountNearServer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nodeNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>求附近已设置服务器的结点的数量 </p>
+
+</div>
+</div>
+<a id="ac12b86623d35d3624e6d93da19233fb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac12b86623d35d3624e6d93da19233fb0">&#9670;&nbsp;</a></span>Cust_Connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Cust_Connect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nodeNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>由网络节点求其连接的消费结点 </p>
+
+</div>
+</div>
+<a id="a4408e16e6f56f3f253368efae20a1462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4408e16e6f56f3f253368efae20a1462">&#9670;&nbsp;</a></span>Dfs_CutEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dfs_CutEdge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>father</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用Tarjan算法求图的割边 </p>
+
+</div>
+</div>
+<a id="af1ca4aa24096da2049e401e440aaecfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ca4aa24096da2049e401e440aaecfc">&#9670;&nbsp;</a></span>Dijkstra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dijkstra </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_customer.html">Customer</a> &amp;&#160;</td>
+          <td class="paramname"><em>start</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65a9ae35388abf14abc064d0f3cae205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a9ae35388abf14abc064d0f3cae205">&#9670;&nbsp;</a></span>Find_Be_Cust()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; Find_Be_Cust </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>beServers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>找到必就近设服务器的消费结点，并返回消费结点编号集合 </p>
+
+</div>
+</div>
+<a id="afe6a51ee6d4a0aa9e1909d71510c046b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6a51ee6d4a0aa9e1909d71510c046b">&#9670;&nbsp;</a></span>Find_Be_Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; Find_Be_Node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>找到必就近设服务器的消费结点，并返回对应连接结点编号集合 </p>
+
+</div>
+</div>
+<a id="a910599af1f8c1ff8f4a5fddb86c37906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a910599af1f8c1ff8f4a5fddb86c37906">&#9670;&nbsp;</a></span>Find_Lonely_Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; Find_Lonely_Node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除孤立结点的边，并返回孤立结点集合 </p>
+
+</div>
+</div>
+<a id="a5fdc497b6ac1986b36ac494861e737f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fdc497b6ac1986b36ac494861e737f9">&#9670;&nbsp;</a></span>Flux_Over_Flow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Flux_Over_Flow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>customNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>启发式：消费节点连接的网络节点的所有路径的带宽总和小于消费节点需求带宽，必是服务器结点 极端情况：Net -&gt; lonelyNode -&gt; ... -&gt; lonelyNode -&gt; custNode 且该链路最小带宽小于消费结点需求 </p>
+
+</div>
+</div>
+<a id="a1f4213f22d050d7b8836cafead983a7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4213f22d050d7b8836cafead983a7d">&#9670;&nbsp;</a></span>hasCust()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasCust </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>判断color的结点集合是否有服务器 </p>
+
+</div>
+</div>
+<a id="a975e251b27f292f638e594e08a5e6db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a975e251b27f292f638e594e08a5e6db7">&#9670;&nbsp;</a></span>Init_Global_Variable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Init_Global_Variable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab73b756a9571f83eaa1ba2679ebd0d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73b756a9571f83eaa1ba2679ebd0d28">&#9670;&nbsp;</a></span>minAB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int minAB </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a058885b5a319f595c83afa0d4c3cdc85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a058885b5a319f595c83afa0d4c3cdc85">&#9670;&nbsp;</a></span>NotCusttoNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NotCusttoNode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nodeNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>判断是否是消费结点连接的结点 </p>
+
+</div>
+</div>
+<a id="a3d2c1c7b9f75da57d5b71fcc2c3c6bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d2c1c7b9f75da57d5b71fcc2c3c6bda">&#9670;&nbsp;</a></span>Only_One_Edge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Only_One_Edge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nodeNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启发式：当一个网络结点仅有一条出边，且无消费结点连接时,一定不会是服务器结点 </p>
+
+</div>
+</div>
+<a id="a3e8b73d5ea5fbf33014295180a6291df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8b73d5ea5fbf33014295180a6291df">&#9670;&nbsp;</a></span>Paint_Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Paint_Node </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nodeNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为结点着色 </p>
+
+</div>
+</div>
+<a id="a2e30b637b0f5c03e43cdb05fe10a457d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e30b637b0f5c03e43cdb05fe10a457d">&#9670;&nbsp;</a></span>Reset_Variable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Reset_Variable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc1bb62c77495116243347748bd006df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc1bb62c77495116243347748bd006df">&#9670;&nbsp;</a></span>Run_Dijkstra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Run_Dijkstra </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>beCustSer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a73002ae626d985c25366a1ba4641fcc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73002ae626d985c25366a1ba4641fcc2">&#9670;&nbsp;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a750b5d744c39a06bfb13e6eb010e35d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a750b5d744c39a06bfb13e6eb010e35d0">&#9670;&nbsp;</a></span>index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int index = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,97 @@
+\hypertarget{io_8cpp}{}\section{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/io.cpp 文件参考}
+\label{io_8cpp}\index{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/io.\+cpp@{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/io.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/timeb.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+io.\+cpp 的引用(Include)关系图\+:
+% FIG 0
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{io_8cpp_a09a3b394b8602092d58347b791158062}{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN}~55000
+\item 
+\#define \hyperlink{io_8cpp_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+UG}
+\item 
+\#define \hyperlink{io_8cpp_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}~static \+\_\+\+\_\+inline
+\item 
+\#define \hyperlink{io_8cpp_a8b43bafee90b30676faae508c21cb8d7}{P\+R\+I\+NT}~printf
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s_d_k-gcc_2cdn_2io_8cpp_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void \hyperlink{io_8cpp_afe2b242b1d443785861b52450c69b3ba}{write\+\_\+file} (const bool cover, const char $\ast$const buff, const char $\ast$const filename)
+\item 
+void \hyperlink{io_8cpp_aaf1025c02a814d50eebe605851e71900}{print\+\_\+time} (const char $\ast$head)
+\item 
+int \hyperlink{io_8cpp_a708ad21ddaefbe61c2eb2ccfa830fc27}{read\+\_\+file} (char $\ast$$\ast$const buff, const unsigned int spec, const char $\ast$const filename)
+\item 
+void \hyperlink{io_8cpp_a25431423c5cb8a43c0119c62e4e120cb}{write\+\_\+result} (const char $\ast$const buff, const char $\ast$const filename)
+\item 
+void \hyperlink{io_8cpp_adc4a454a96742f1b3dae623d8ed4c288}{release\+\_\+buff} (char $\ast$$\ast$const buff, const int valid\+\_\+item\+\_\+num)
+\end{DoxyCompactItemize}
+
+
+\subsection{宏定义说明}
+\mbox{\Hypertarget{io_8cpp_a152fc5203b90b1cff03b7b78579b8f52}\label{io_8cpp_a152fc5203b90b1cff03b7b78579b8f52}} 
+\index{io.\+cpp@{io.\+cpp}!\+\_\+\+D\+E\+B\+UG@{\+\_\+\+D\+E\+B\+UG}}
+\index{\+\_\+\+D\+E\+B\+UG@{\+\_\+\+D\+E\+B\+UG}!io.\+cpp@{io.\+cpp}}
+\subsubsection{\texorpdfstring{\+\_\+\+D\+E\+B\+UG}{\_DEBUG}}
+{\footnotesize\ttfamily \#define \+\_\+\+D\+E\+B\+UG}
+
+\mbox{\Hypertarget{io_8cpp_a2eb6f9e0395b47b8d5e3eeae4fe0c116}\label{io_8cpp_a2eb6f9e0395b47b8d5e3eeae4fe0c116}} 
+\index{io.\+cpp@{io.\+cpp}!I\+N\+L\+I\+NE@{I\+N\+L\+I\+NE}}
+\index{I\+N\+L\+I\+NE@{I\+N\+L\+I\+NE}!io.\+cpp@{io.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+L\+I\+NE}{INLINE}}
+{\footnotesize\ttfamily \#define I\+N\+L\+I\+NE~static \+\_\+\+\_\+inline}
+
+\mbox{\Hypertarget{io_8cpp_a09a3b394b8602092d58347b791158062}\label{io_8cpp_a09a3b394b8602092d58347b791158062}} 
+\index{io.\+cpp@{io.\+cpp}!M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN@{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN}}
+\index{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN@{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN}!io.\+cpp@{io.\+cpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN}{MAX\_LINE\_LEN}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+L\+EN~55000}
+
+\mbox{\Hypertarget{io_8cpp_a8b43bafee90b30676faae508c21cb8d7}\label{io_8cpp_a8b43bafee90b30676faae508c21cb8d7}} 
+\index{io.\+cpp@{io.\+cpp}!P\+R\+I\+NT@{P\+R\+I\+NT}}
+\index{P\+R\+I\+NT@{P\+R\+I\+NT}!io.\+cpp@{io.\+cpp}}
+\subsubsection{\texorpdfstring{P\+R\+I\+NT}{PRINT}}
+{\footnotesize\ttfamily \#define P\+R\+I\+NT~printf}
+
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{io_8cpp_aaf1025c02a814d50eebe605851e71900}\label{io_8cpp_aaf1025c02a814d50eebe605851e71900}} 
+\index{io.\+cpp@{io.\+cpp}!print\+\_\+time@{print\+\_\+time}}
+\index{print\+\_\+time@{print\+\_\+time}!io.\+cpp@{io.\+cpp}}
+\subsubsection{\texorpdfstring{print\+\_\+time()}{print\_time()}}
+{\footnotesize\ttfamily void print\+\_\+time (\begin{DoxyParamCaption}\item[{const char $\ast$}]{head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8cpp_a708ad21ddaefbe61c2eb2ccfa830fc27}\label{io_8cpp_a708ad21ddaefbe61c2eb2ccfa830fc27}} 
+\index{io.\+cpp@{io.\+cpp}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!io.\+cpp@{io.\+cpp}}
+\subsubsection{\texorpdfstring{read\+\_\+file()}{read\_file()}}
+{\footnotesize\ttfamily int read\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$const}]{buff,  }\item[{const unsigned int}]{spec,  }\item[{const char $\ast$const}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8cpp_adc4a454a96742f1b3dae623d8ed4c288}\label{io_8cpp_adc4a454a96742f1b3dae623d8ed4c288}} 
+\index{io.\+cpp@{io.\+cpp}!release\+\_\+buff@{release\+\_\+buff}}
+\index{release\+\_\+buff@{release\+\_\+buff}!io.\+cpp@{io.\+cpp}}
+\subsubsection{\texorpdfstring{release\+\_\+buff()}{release\_buff()}}
+{\footnotesize\ttfamily void release\+\_\+buff (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$const}]{buff,  }\item[{const int}]{valid\+\_\+item\+\_\+num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8cpp_afe2b242b1d443785861b52450c69b3ba}\label{io_8cpp_afe2b242b1d443785861b52450c69b3ba}} 
+\index{io.\+cpp@{io.\+cpp}!write\+\_\+file@{write\+\_\+file}}
+\index{write\+\_\+file@{write\+\_\+file}!io.\+cpp@{io.\+cpp}}
+\subsubsection{\texorpdfstring{write\+\_\+file()}{write\_file()}}
+{\footnotesize\ttfamily \hyperlink{_s_d_k-gcc_2cdn_2io_8cpp_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE} void write\+\_\+file (\begin{DoxyParamCaption}\item[{const bool}]{cover,  }\item[{const char $\ast$const}]{buff,  }\item[{const char $\ast$const}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8cpp_a25431423c5cb8a43c0119c62e4e120cb}\label{io_8cpp_a25431423c5cb8a43c0119c62e4e120cb}} 
+\index{io.\+cpp@{io.\+cpp}!write\+\_\+result@{write\+\_\+result}}
+\index{write\+\_\+result@{write\+\_\+result}!io.\+cpp@{io.\+cpp}}
+\subsubsection{\texorpdfstring{write\+\_\+result()}{write\_result()}}
+{\footnotesize\ttfamily void write\+\_\+result (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{buff,  }\item[{const char $\ast$const}]{filename }\end{DoxyParamCaption})}
+

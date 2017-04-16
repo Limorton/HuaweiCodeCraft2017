@@ -1,0 +1,329 @@
+\hypertarget{limorton___graph_8h}{}\section{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+\+Graph.h 文件参考}
+\label{limorton___graph_8h}\index{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+\+Graph.\+h@{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+\+Graph.\+h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+limorton\+\_\+\+Graph.\+h 的引用(Include)关系图\+:
+% FIG 0
+此图展示该文件直接或间接的被哪些文件引用了\+:
+% FIG 1
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_edge_node}{Edge\+Node}
+\begin{DoxyCompactList}\small\item\em 边结构 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_vertex_node}{Vertex\+Node}
+\begin{DoxyCompactList}\small\item\em 结点结构 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_customer}{Customer}
+\begin{DoxyCompactList}\small\item\em 消费节点 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_evaluater}{Evaluater}
+\begin{DoxyCompactList}\small\item\em 图的评估结构体 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_video_net_graph}{Video\+Net\+Graph}
+\begin{DoxyCompactList}\small\item\em 全图结构 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{limorton___graph_8h_a7232568735c616e590a13826a29a9207}{Lim\+\_\+\+Debug}~1
+\end{DoxyCompactItemize}
+\subsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{limorton___graph_8h_ac319c165d52643e43249fe003e18bdf3}{u\+\_\+int}
+\item 
+typedef int \hyperlink{limorton___graph_8h_a1b1a96beadaa686056e47989bf2a037e}{Node\+Type}
+\item 
+typedef int \hyperlink{limorton___graph_8h_af75ec072bd23242821f5cdbeea6f64de}{Band\+Width\+Type}
+\item 
+typedef int \hyperlink{limorton___graph_8h_a1f3d1d745c99aef46faa0e3d7338470e}{Rent\+Type}
+\item 
+typedef int \hyperlink{limorton___graph_8h_ad078283245fcc340f88e58ec4c9243b3}{Customer\+Type}
+\item 
+typedef int \hyperlink{limorton___graph_8h_a86b0653fa2bba76fcca4a7562dc60d30}{Need\+Type}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{limorton___graph_8h_ac48d3ff248f1a594452a296a4164f53e}{Print\+\_\+\+Edges} (int i)
+\begin{DoxyCompactList}\small\item\em 输出显示结点i的出边 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___graph_8h_a1426b5659291f61a5104267ff192d51e}{Init\+\_\+\+Graph} (char $\ast$$\ast$topo)
+\begin{DoxyCompactList}\small\item\em 初始拓扑图 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___graph_8h_a6d890a6a2ecc44125550cd59052c42ae}{Add\+\_\+\+One\+Edge} (int head, int tail, int band, int r\+\_\+band, int rent)
+\begin{DoxyCompactList}\small\item\em 添加一条边 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___graph_8h_ae328381a12e2df1ef0ca2b040d6b5b77}{Delete\+\_\+\+One\+Edge} (int head, int tail)
+\begin{DoxyCompactList}\small\item\em 删除一条边 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___graph_8h_a4d15bbe793e751572d252667e7671884}{Add\+\_\+\+Super\+Source\+Node\+Edge} (const vector$<$ int $>$ \&Server\+Node)
+\begin{DoxyCompactList}\small\item\em 添加超级源边 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___graph_8h_a2360fcdf387e3b49a5942822d7babc7b}{Destory\+\_\+\+Super\+Source\+Node\+Edge} (const vector$<$ int $>$ \&Server\+Node)
+\begin{DoxyCompactList}\small\item\em 删除超级源边 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___graph_8h_ab511e72fc454e5294e8ac1c5cd60c344}{Add\+\_\+\+Super\+End\+Node\+Edge} ()
+\begin{DoxyCompactList}\small\item\em 添加超级汇边 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___graph_8h_a4b5b96ae02e90e6f0f73b129e3a61609}{Destory\+\_\+\+Super\+End\+Node\+Edge} ()
+\begin{DoxyCompactList}\small\item\em 删除超级汇边 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___graph_8h_a9800f10ab30f0d8fb54ad22d8bbb7c33}{Create\+\_\+\+Graph} (char $\ast$$\ast$topo)
+\begin{DoxyCompactList}\small\item\em 生成拓扑图 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___graph_8h_a56343109407e915d829e22e4e0200019}{Destory\+\_\+\+Graph} ()
+\begin{DoxyCompactList}\small\item\em 删除拓扑图空间 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___graph_8h_a438575684bed712b4a2b999908f921be}{Print\+\_\+\+Graph} ()
+\begin{DoxyCompactList}\small\item\em 显示拓扑图 \end{DoxyCompactList}\item 
+int \hyperlink{limorton___graph_8h_a1c3a0620b381dd5188428797f678ef53}{Check\+\_\+\+Edge} (int i, int j)
+\begin{DoxyCompactList}\small\item\em 返回边的已用带宽 \end{DoxyCompactList}\item 
+int \hyperlink{limorton___graph_8h_ad60ca14c1423fe5f1c682c87c7a9c47d}{Check\+\_\+\+Band} (int i, int j)
+\begin{DoxyCompactList}\small\item\em 返回边的剩余带宽 \end{DoxyCompactList}\item 
+int \hyperlink{limorton___graph_8h_abcdbe75171241ee84075ed2deac053f1}{Get\+\_\+\+Band} (int i, int j)
+\begin{DoxyCompactList}\small\item\em 返回边的初始带宽 \end{DoxyCompactList}\item 
+int \hyperlink{limorton___graph_8h_ae6b1246ecdf53785ccd56dc40d9a55ac}{Get\+\_\+\+Rent} (int i, int j)
+\begin{DoxyCompactList}\small\item\em 返回边的租金 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{limorton___graph_8h_ac88c5a1c472aa536546f613cbcab95e7}{B\+A\+N\+D\+\_\+\+M\+AX} = I\+N\+T\+\_\+\+M\+AX
+\item 
+const int \hyperlink{limorton___graph_8h_ad5d6a85d426d32d32a2feaea3f13dbbc}{D\+I\+S\+T\+\_\+\+M\+AX} = I\+N\+T\+\_\+\+M\+AX
+\item 
+const int \hyperlink{limorton___graph_8h_a41e97b2c9c031e1f2e7ce4fd4fed98b1}{F\+L\+O\+W\+\_\+\+M\+AX} = I\+N\+T\+\_\+\+M\+AX
+\item 
+const int \hyperlink{limorton___graph_8h_a82ff257613863c1e29c4a3df7cce894b}{C\+O\+S\+T\+\_\+\+M\+AX} = I\+N\+T\+\_\+\+M\+AX
+\item 
+const int \hyperlink{limorton___graph_8h_a6aaca22baccea8a90967c19bbe9e4180}{M\+Y\+\_\+\+I\+N\+T\+\_\+\+M\+AX} = I\+N\+T\+\_\+\+M\+AX
+\item 
+\hyperlink{struct_video_net_graph}{Video\+Net\+Graph} \hyperlink{limorton___graph_8h_afba2e40a7cb5dccf3452a683c66d9f2c}{graph}
+\end{DoxyCompactItemize}
+
+
+\subsection{宏定义说明}
+\mbox{\Hypertarget{limorton___graph_8h_a7232568735c616e590a13826a29a9207}\label{limorton___graph_8h_a7232568735c616e590a13826a29a9207}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Lim\+\_\+\+Debug@{Lim\+\_\+\+Debug}}
+\index{Lim\+\_\+\+Debug@{Lim\+\_\+\+Debug}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Lim\+\_\+\+Debug}{Lim\_Debug}}
+{\footnotesize\ttfamily \#define Lim\+\_\+\+Debug~1}
+
+
+
+\subsection{类型定义说明}
+\mbox{\Hypertarget{limorton___graph_8h_af75ec072bd23242821f5cdbeea6f64de}\label{limorton___graph_8h_af75ec072bd23242821f5cdbeea6f64de}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Band\+Width\+Type@{Band\+Width\+Type}}
+\index{Band\+Width\+Type@{Band\+Width\+Type}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Band\+Width\+Type}{BandWidthType}}
+{\footnotesize\ttfamily typedef int \hyperlink{limorton___graph_8h_af75ec072bd23242821f5cdbeea6f64de}{Band\+Width\+Type}}
+
+\mbox{\Hypertarget{limorton___graph_8h_ad078283245fcc340f88e58ec4c9243b3}\label{limorton___graph_8h_ad078283245fcc340f88e58ec4c9243b3}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Customer\+Type@{Customer\+Type}}
+\index{Customer\+Type@{Customer\+Type}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Customer\+Type}{CustomerType}}
+{\footnotesize\ttfamily typedef int \hyperlink{limorton___graph_8h_ad078283245fcc340f88e58ec4c9243b3}{Customer\+Type}}
+
+\mbox{\Hypertarget{limorton___graph_8h_a86b0653fa2bba76fcca4a7562dc60d30}\label{limorton___graph_8h_a86b0653fa2bba76fcca4a7562dc60d30}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Need\+Type@{Need\+Type}}
+\index{Need\+Type@{Need\+Type}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Need\+Type}{NeedType}}
+{\footnotesize\ttfamily typedef int \hyperlink{limorton___graph_8h_a86b0653fa2bba76fcca4a7562dc60d30}{Need\+Type}}
+
+\mbox{\Hypertarget{limorton___graph_8h_a1b1a96beadaa686056e47989bf2a037e}\label{limorton___graph_8h_a1b1a96beadaa686056e47989bf2a037e}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Node\+Type@{Node\+Type}}
+\index{Node\+Type@{Node\+Type}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Node\+Type}{NodeType}}
+{\footnotesize\ttfamily typedef int \hyperlink{limorton___graph_8h_a1b1a96beadaa686056e47989bf2a037e}{Node\+Type}}
+
+\mbox{\Hypertarget{limorton___graph_8h_a1f3d1d745c99aef46faa0e3d7338470e}\label{limorton___graph_8h_a1f3d1d745c99aef46faa0e3d7338470e}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Rent\+Type@{Rent\+Type}}
+\index{Rent\+Type@{Rent\+Type}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Rent\+Type}{RentType}}
+{\footnotesize\ttfamily typedef int \hyperlink{limorton___graph_8h_a1f3d1d745c99aef46faa0e3d7338470e}{Rent\+Type}}
+
+\mbox{\Hypertarget{limorton___graph_8h_ac319c165d52643e43249fe003e18bdf3}\label{limorton___graph_8h_ac319c165d52643e43249fe003e18bdf3}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!u\+\_\+int@{u\+\_\+int}}
+\index{u\+\_\+int@{u\+\_\+int}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{u\+\_\+int}{u\_int}}
+{\footnotesize\ttfamily typedef unsigned int \hyperlink{limorton___graph_8h_ac319c165d52643e43249fe003e18bdf3}{u\+\_\+int}}
+
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{limorton___graph_8h_a6d890a6a2ecc44125550cd59052c42ae}\label{limorton___graph_8h_a6d890a6a2ecc44125550cd59052c42ae}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Add\+\_\+\+One\+Edge@{Add\+\_\+\+One\+Edge}}
+\index{Add\+\_\+\+One\+Edge@{Add\+\_\+\+One\+Edge}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Add\+\_\+\+One\+Edge()}{Add\_OneEdge()}}
+{\footnotesize\ttfamily void Add\+\_\+\+One\+Edge (\begin{DoxyParamCaption}\item[{int}]{head,  }\item[{int}]{tail,  }\item[{int}]{band,  }\item[{int}]{r\+\_\+band,  }\item[{int}]{rent }\end{DoxyParamCaption})}
+
+
+
+添加一条边 
+
+\mbox{\Hypertarget{limorton___graph_8h_ab511e72fc454e5294e8ac1c5cd60c344}\label{limorton___graph_8h_ab511e72fc454e5294e8ac1c5cd60c344}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Add\+\_\+\+Super\+End\+Node\+Edge@{Add\+\_\+\+Super\+End\+Node\+Edge}}
+\index{Add\+\_\+\+Super\+End\+Node\+Edge@{Add\+\_\+\+Super\+End\+Node\+Edge}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Add\+\_\+\+Super\+End\+Node\+Edge()}{Add\_SuperEndNodeEdge()}}
+{\footnotesize\ttfamily void Add\+\_\+\+Super\+End\+Node\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+添加超级汇边 
+
+\mbox{\Hypertarget{limorton___graph_8h_a4d15bbe793e751572d252667e7671884}\label{limorton___graph_8h_a4d15bbe793e751572d252667e7671884}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Add\+\_\+\+Super\+Source\+Node\+Edge@{Add\+\_\+\+Super\+Source\+Node\+Edge}}
+\index{Add\+\_\+\+Super\+Source\+Node\+Edge@{Add\+\_\+\+Super\+Source\+Node\+Edge}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Add\+\_\+\+Super\+Source\+Node\+Edge()}{Add\_SuperSourceNodeEdge()}}
+{\footnotesize\ttfamily void Add\+\_\+\+Super\+Source\+Node\+Edge (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{Server\+Node }\end{DoxyParamCaption})}
+
+
+
+添加超级源边 
+
+\mbox{\Hypertarget{limorton___graph_8h_ad60ca14c1423fe5f1c682c87c7a9c47d}\label{limorton___graph_8h_ad60ca14c1423fe5f1c682c87c7a9c47d}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Check\+\_\+\+Band@{Check\+\_\+\+Band}}
+\index{Check\+\_\+\+Band@{Check\+\_\+\+Band}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Check\+\_\+\+Band()}{Check\_Band()}}
+{\footnotesize\ttfamily int Check\+\_\+\+Band (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+返回边的剩余带宽 
+
+\mbox{\Hypertarget{limorton___graph_8h_a1c3a0620b381dd5188428797f678ef53}\label{limorton___graph_8h_a1c3a0620b381dd5188428797f678ef53}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Check\+\_\+\+Edge@{Check\+\_\+\+Edge}}
+\index{Check\+\_\+\+Edge@{Check\+\_\+\+Edge}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Check\+\_\+\+Edge()}{Check\_Edge()}}
+{\footnotesize\ttfamily int Check\+\_\+\+Edge (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+返回边的已用带宽 
+
+\mbox{\Hypertarget{limorton___graph_8h_a9800f10ab30f0d8fb54ad22d8bbb7c33}\label{limorton___graph_8h_a9800f10ab30f0d8fb54ad22d8bbb7c33}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Create\+\_\+\+Graph@{Create\+\_\+\+Graph}}
+\index{Create\+\_\+\+Graph@{Create\+\_\+\+Graph}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Create\+\_\+\+Graph()}{Create\_Graph()}}
+{\footnotesize\ttfamily void Create\+\_\+\+Graph (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{topo }\end{DoxyParamCaption})}
+
+
+
+生成拓扑图 
+
+\mbox{\Hypertarget{limorton___graph_8h_ae328381a12e2df1ef0ca2b040d6b5b77}\label{limorton___graph_8h_ae328381a12e2df1ef0ca2b040d6b5b77}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Delete\+\_\+\+One\+Edge@{Delete\+\_\+\+One\+Edge}}
+\index{Delete\+\_\+\+One\+Edge@{Delete\+\_\+\+One\+Edge}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Delete\+\_\+\+One\+Edge()}{Delete\_OneEdge()}}
+{\footnotesize\ttfamily void Delete\+\_\+\+One\+Edge (\begin{DoxyParamCaption}\item[{int}]{head,  }\item[{int}]{tail }\end{DoxyParamCaption})}
+
+
+
+删除一条边 
+
+\mbox{\Hypertarget{limorton___graph_8h_a56343109407e915d829e22e4e0200019}\label{limorton___graph_8h_a56343109407e915d829e22e4e0200019}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Destory\+\_\+\+Graph@{Destory\+\_\+\+Graph}}
+\index{Destory\+\_\+\+Graph@{Destory\+\_\+\+Graph}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Destory\+\_\+\+Graph()}{Destory\_Graph()}}
+{\footnotesize\ttfamily void Destory\+\_\+\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+删除拓扑图空间 
+
+\mbox{\Hypertarget{limorton___graph_8h_a4b5b96ae02e90e6f0f73b129e3a61609}\label{limorton___graph_8h_a4b5b96ae02e90e6f0f73b129e3a61609}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Destory\+\_\+\+Super\+End\+Node\+Edge@{Destory\+\_\+\+Super\+End\+Node\+Edge}}
+\index{Destory\+\_\+\+Super\+End\+Node\+Edge@{Destory\+\_\+\+Super\+End\+Node\+Edge}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Destory\+\_\+\+Super\+End\+Node\+Edge()}{Destory\_SuperEndNodeEdge()}}
+{\footnotesize\ttfamily void Destory\+\_\+\+Super\+End\+Node\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+删除超级汇边 
+
+\mbox{\Hypertarget{limorton___graph_8h_a2360fcdf387e3b49a5942822d7babc7b}\label{limorton___graph_8h_a2360fcdf387e3b49a5942822d7babc7b}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Destory\+\_\+\+Super\+Source\+Node\+Edge@{Destory\+\_\+\+Super\+Source\+Node\+Edge}}
+\index{Destory\+\_\+\+Super\+Source\+Node\+Edge@{Destory\+\_\+\+Super\+Source\+Node\+Edge}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Destory\+\_\+\+Super\+Source\+Node\+Edge()}{Destory\_SuperSourceNodeEdge()}}
+{\footnotesize\ttfamily void Destory\+\_\+\+Super\+Source\+Node\+Edge (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{Server\+Node }\end{DoxyParamCaption})}
+
+
+
+删除超级源边 
+
+\mbox{\Hypertarget{limorton___graph_8h_abcdbe75171241ee84075ed2deac053f1}\label{limorton___graph_8h_abcdbe75171241ee84075ed2deac053f1}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Get\+\_\+\+Band@{Get\+\_\+\+Band}}
+\index{Get\+\_\+\+Band@{Get\+\_\+\+Band}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+Band()}{Get\_Band()}}
+{\footnotesize\ttfamily int Get\+\_\+\+Band (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+返回边的初始带宽 
+
+\mbox{\Hypertarget{limorton___graph_8h_ae6b1246ecdf53785ccd56dc40d9a55ac}\label{limorton___graph_8h_ae6b1246ecdf53785ccd56dc40d9a55ac}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Get\+\_\+\+Rent@{Get\+\_\+\+Rent}}
+\index{Get\+\_\+\+Rent@{Get\+\_\+\+Rent}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+Rent()}{Get\_Rent()}}
+{\footnotesize\ttfamily int Get\+\_\+\+Rent (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+返回边的租金 
+
+\mbox{\Hypertarget{limorton___graph_8h_a1426b5659291f61a5104267ff192d51e}\label{limorton___graph_8h_a1426b5659291f61a5104267ff192d51e}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Init\+\_\+\+Graph@{Init\+\_\+\+Graph}}
+\index{Init\+\_\+\+Graph@{Init\+\_\+\+Graph}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Init\+\_\+\+Graph()}{Init\_Graph()}}
+{\footnotesize\ttfamily void Init\+\_\+\+Graph (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{topo }\end{DoxyParamCaption})}
+
+
+
+初始拓扑图 
+
+\mbox{\Hypertarget{limorton___graph_8h_ac48d3ff248f1a594452a296a4164f53e}\label{limorton___graph_8h_ac48d3ff248f1a594452a296a4164f53e}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Print\+\_\+\+Edges@{Print\+\_\+\+Edges}}
+\index{Print\+\_\+\+Edges@{Print\+\_\+\+Edges}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Print\+\_\+\+Edges()}{Print\_Edges()}}
+{\footnotesize\ttfamily void Print\+\_\+\+Edges (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+输出显示结点i的出边 
+
+\mbox{\Hypertarget{limorton___graph_8h_a438575684bed712b4a2b999908f921be}\label{limorton___graph_8h_a438575684bed712b4a2b999908f921be}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!Print\+\_\+\+Graph@{Print\+\_\+\+Graph}}
+\index{Print\+\_\+\+Graph@{Print\+\_\+\+Graph}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{Print\+\_\+\+Graph()}{Print\_Graph()}}
+{\footnotesize\ttfamily void Print\+\_\+\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+显示拓扑图 
+
+
+
+\subsection{变量说明}
+\mbox{\Hypertarget{limorton___graph_8h_ac88c5a1c472aa536546f613cbcab95e7}\label{limorton___graph_8h_ac88c5a1c472aa536546f613cbcab95e7}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!B\+A\+N\+D\+\_\+\+M\+AX@{B\+A\+N\+D\+\_\+\+M\+AX}}
+\index{B\+A\+N\+D\+\_\+\+M\+AX@{B\+A\+N\+D\+\_\+\+M\+AX}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{B\+A\+N\+D\+\_\+\+M\+AX}{BAND\_MAX}}
+{\footnotesize\ttfamily const int B\+A\+N\+D\+\_\+\+M\+AX = I\+N\+T\+\_\+\+M\+AX}
+
+\mbox{\Hypertarget{limorton___graph_8h_a82ff257613863c1e29c4a3df7cce894b}\label{limorton___graph_8h_a82ff257613863c1e29c4a3df7cce894b}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!C\+O\+S\+T\+\_\+\+M\+AX@{C\+O\+S\+T\+\_\+\+M\+AX}}
+\index{C\+O\+S\+T\+\_\+\+M\+AX@{C\+O\+S\+T\+\_\+\+M\+AX}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+S\+T\+\_\+\+M\+AX}{COST\_MAX}}
+{\footnotesize\ttfamily const int C\+O\+S\+T\+\_\+\+M\+AX = I\+N\+T\+\_\+\+M\+AX}
+
+\mbox{\Hypertarget{limorton___graph_8h_ad5d6a85d426d32d32a2feaea3f13dbbc}\label{limorton___graph_8h_ad5d6a85d426d32d32a2feaea3f13dbbc}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!D\+I\+S\+T\+\_\+\+M\+AX@{D\+I\+S\+T\+\_\+\+M\+AX}}
+\index{D\+I\+S\+T\+\_\+\+M\+AX@{D\+I\+S\+T\+\_\+\+M\+AX}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+S\+T\+\_\+\+M\+AX}{DIST\_MAX}}
+{\footnotesize\ttfamily const int D\+I\+S\+T\+\_\+\+M\+AX = I\+N\+T\+\_\+\+M\+AX}
+
+\mbox{\Hypertarget{limorton___graph_8h_a41e97b2c9c031e1f2e7ce4fd4fed98b1}\label{limorton___graph_8h_a41e97b2c9c031e1f2e7ce4fd4fed98b1}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!F\+L\+O\+W\+\_\+\+M\+AX@{F\+L\+O\+W\+\_\+\+M\+AX}}
+\index{F\+L\+O\+W\+\_\+\+M\+AX@{F\+L\+O\+W\+\_\+\+M\+AX}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+O\+W\+\_\+\+M\+AX}{FLOW\_MAX}}
+{\footnotesize\ttfamily const int F\+L\+O\+W\+\_\+\+M\+AX = I\+N\+T\+\_\+\+M\+AX}
+
+\mbox{\Hypertarget{limorton___graph_8h_afba2e40a7cb5dccf3452a683c66d9f2c}\label{limorton___graph_8h_afba2e40a7cb5dccf3452a683c66d9f2c}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!graph@{graph}}
+\index{graph@{graph}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily \hyperlink{struct_video_net_graph}{Video\+Net\+Graph} graph}
+
+\mbox{\Hypertarget{limorton___graph_8h_a6aaca22baccea8a90967c19bbe9e4180}\label{limorton___graph_8h_a6aaca22baccea8a90967c19bbe9e4180}} 
+\index{limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}!M\+Y\+\_\+\+I\+N\+T\+\_\+\+M\+AX@{M\+Y\+\_\+\+I\+N\+T\+\_\+\+M\+AX}}
+\index{M\+Y\+\_\+\+I\+N\+T\+\_\+\+M\+AX@{M\+Y\+\_\+\+I\+N\+T\+\_\+\+M\+AX}!limorton\+\_\+\+Graph.\+h@{limorton\+\_\+\+Graph.\+h}}
+\subsubsection{\texorpdfstring{M\+Y\+\_\+\+I\+N\+T\+\_\+\+M\+AX}{MY\_INT\_MAX}}
+{\footnotesize\ttfamily const int M\+Y\+\_\+\+I\+N\+T\+\_\+\+M\+AX = I\+N\+T\+\_\+\+M\+AX}
+

@@ -1,0 +1,112 @@
+\hypertarget{limorton__ant_colony_8cpp}{}\section{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+ant\+Colony.cpp 文件参考}
+\label{limorton__ant_colony_8cpp}\index{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+ant\+Colony.\+cpp@{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+ant\+Colony.\+cpp}}
+{\ttfamily \#include \char`\"{}limorton\+\_\+ant\+Colony.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}limorton\+\_\+\+Graph.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+limorton\+\_\+ant\+Colony.\+cpp 的引用(Include)关系图\+:
+% FIG 0
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{limorton__ant_colony_8cpp_a3774e7a3c3cdbb588492b8575430d624}{lim\+\_\+debug}~0
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{limorton__ant_colony_8cpp_a0e73c81e6bc1233a28f20dc32d89d6bb}{Set\+\_\+\+Node\+\_\+\+Priority} ()
+\begin{DoxyCompactList}\small\item\em 启发式\+: \end{DoxyCompactList}\item 
+bool \hyperlink{limorton__ant_colony_8cpp_a3d2c1c7b9f75da57d5b71fcc2c3c6bda}{Only\+\_\+\+One\+\_\+\+Edge} (int node\+Num)
+\item 
+bool \hyperlink{limorton__ant_colony_8cpp_a5fdc497b6ac1986b36ac494861e737f9}{Flux\+\_\+\+Over\+\_\+\+Flow} (int custom\+Num)
+\item 
+int \hyperlink{limorton__ant_colony_8cpp_a2baf3bed31925be9e1ff96b032c55ac7}{Choose\+\_\+\+Next\+\_\+\+Node} (int node, const vector$<$ int $>$ \&visited\+Node, int \&min\+Rent, int \&band)
+\item 
+void \hyperlink{limorton__ant_colony_8cpp_a7683859ab551d0303fb3917ba9219d11}{Init\+\_\+\+Global\+\_\+\+Path} (vector$<$ int $>$ \&cost, vector$<$ int $>$ \&band, const vector$<$ int $>$ \&ant\+Life)
+\item 
+void \hyperlink{limorton__ant_colony_8cpp_a5ff6cbd7f653598840e16740edf0055b}{Ant\+Colony\+Alogrithm} (const \hyperlink{struct_video_net_graph}{Video\+Net\+Graph} \&Graph)
+\item 
+void \hyperlink{limorton__ant_colony_8cpp_a6612b61190677d38cfe28704c4a0217c}{Debug\+\_\+\+Into} ()
+\item 
+char $\ast$ \hyperlink{limorton__ant_colony_8cpp_a52ea726ac25b49e46420ad7095d5a61c}{Direct\+\_\+\+Connect} ()
+\begin{DoxyCompactList}\small\item\em 直连输出 \end{DoxyCompactList}\item 
+void \hyperlink{limorton__ant_colony_8cpp_a702fe9a1ff0e4e08c28169383367b406}{Get\+\_\+\+Graph} (const \hyperlink{struct_video_net_graph}{Video\+Net\+Graph} \&Graph)
+\end{DoxyCompactItemize}
+
+
+\subsection{宏定义说明}
+\mbox{\Hypertarget{limorton__ant_colony_8cpp_a3774e7a3c3cdbb588492b8575430d624}\label{limorton__ant_colony_8cpp_a3774e7a3c3cdbb588492b8575430d624}} 
+\index{limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}!lim\+\_\+debug@{lim\+\_\+debug}}
+\index{lim\+\_\+debug@{lim\+\_\+debug}!limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}}
+\subsubsection{\texorpdfstring{lim\+\_\+debug}{lim\_debug}}
+{\footnotesize\ttfamily \#define lim\+\_\+debug~0}
+
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{limorton__ant_colony_8cpp_a5ff6cbd7f653598840e16740edf0055b}\label{limorton__ant_colony_8cpp_a5ff6cbd7f653598840e16740edf0055b}} 
+\index{limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}!Ant\+Colony\+Alogrithm@{Ant\+Colony\+Alogrithm}}
+\index{Ant\+Colony\+Alogrithm@{Ant\+Colony\+Alogrithm}!limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}}
+\subsubsection{\texorpdfstring{Ant\+Colony\+Alogrithm()}{AntColonyAlogrithm()}}
+{\footnotesize\ttfamily void Ant\+Colony\+Alogrithm (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_video_net_graph}{Video\+Net\+Graph} \&}]{Graph }\end{DoxyParamCaption})}
+
+coding \mbox{\Hypertarget{limorton__ant_colony_8cpp_a2baf3bed31925be9e1ff96b032c55ac7}\label{limorton__ant_colony_8cpp_a2baf3bed31925be9e1ff96b032c55ac7}} 
+\index{limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}!Choose\+\_\+\+Next\+\_\+\+Node@{Choose\+\_\+\+Next\+\_\+\+Node}}
+\index{Choose\+\_\+\+Next\+\_\+\+Node@{Choose\+\_\+\+Next\+\_\+\+Node}!limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}}
+\subsubsection{\texorpdfstring{Choose\+\_\+\+Next\+\_\+\+Node()}{Choose\_Next\_Node()}}
+{\footnotesize\ttfamily int Choose\+\_\+\+Next\+\_\+\+Node (\begin{DoxyParamCaption}\item[{int}]{node,  }\item[{const vector$<$ int $>$ \&}]{visited\+Node,  }\item[{int \&}]{min\+Rent,  }\item[{int \&}]{band }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton__ant_colony_8cpp_a6612b61190677d38cfe28704c4a0217c}\label{limorton__ant_colony_8cpp_a6612b61190677d38cfe28704c4a0217c}} 
+\index{limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}!Debug\+\_\+\+Into@{Debug\+\_\+\+Into}}
+\index{Debug\+\_\+\+Into@{Debug\+\_\+\+Into}!limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}}
+\subsubsection{\texorpdfstring{Debug\+\_\+\+Into()}{Debug\_Into()}}
+{\footnotesize\ttfamily void Debug\+\_\+\+Into (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton__ant_colony_8cpp_a52ea726ac25b49e46420ad7095d5a61c}\label{limorton__ant_colony_8cpp_a52ea726ac25b49e46420ad7095d5a61c}} 
+\index{limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}!Direct\+\_\+\+Connect@{Direct\+\_\+\+Connect}}
+\index{Direct\+\_\+\+Connect@{Direct\+\_\+\+Connect}!limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}}
+\subsubsection{\texorpdfstring{Direct\+\_\+\+Connect()}{Direct\_Connect()}}
+{\footnotesize\ttfamily char$\ast$ Direct\+\_\+\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+直连输出 
+
+\mbox{\Hypertarget{limorton__ant_colony_8cpp_a5fdc497b6ac1986b36ac494861e737f9}\label{limorton__ant_colony_8cpp_a5fdc497b6ac1986b36ac494861e737f9}} 
+\index{limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}!Flux\+\_\+\+Over\+\_\+\+Flow@{Flux\+\_\+\+Over\+\_\+\+Flow}}
+\index{Flux\+\_\+\+Over\+\_\+\+Flow@{Flux\+\_\+\+Over\+\_\+\+Flow}!limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}}
+\subsubsection{\texorpdfstring{Flux\+\_\+\+Over\+\_\+\+Flow()}{Flux\_Over\_Flow()}}
+{\footnotesize\ttfamily bool Flux\+\_\+\+Over\+\_\+\+Flow (\begin{DoxyParamCaption}\item[{int}]{custom\+Num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton__ant_colony_8cpp_a702fe9a1ff0e4e08c28169383367b406}\label{limorton__ant_colony_8cpp_a702fe9a1ff0e4e08c28169383367b406}} 
+\index{limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}!Get\+\_\+\+Graph@{Get\+\_\+\+Graph}}
+\index{Get\+\_\+\+Graph@{Get\+\_\+\+Graph}!limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+Graph()}{Get\_Graph()}}
+{\footnotesize\ttfamily void Get\+\_\+\+Graph (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_video_net_graph}{Video\+Net\+Graph} \&}]{Graph }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton__ant_colony_8cpp_a7683859ab551d0303fb3917ba9219d11}\label{limorton__ant_colony_8cpp_a7683859ab551d0303fb3917ba9219d11}} 
+\index{limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}!Init\+\_\+\+Global\+\_\+\+Path@{Init\+\_\+\+Global\+\_\+\+Path}}
+\index{Init\+\_\+\+Global\+\_\+\+Path@{Init\+\_\+\+Global\+\_\+\+Path}!limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}}
+\subsubsection{\texorpdfstring{Init\+\_\+\+Global\+\_\+\+Path()}{Init\_Global\_Path()}}
+{\footnotesize\ttfamily void Init\+\_\+\+Global\+\_\+\+Path (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{cost,  }\item[{vector$<$ int $>$ \&}]{band,  }\item[{const vector$<$ int $>$ \&}]{ant\+Life }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton__ant_colony_8cpp_a3d2c1c7b9f75da57d5b71fcc2c3c6bda}\label{limorton__ant_colony_8cpp_a3d2c1c7b9f75da57d5b71fcc2c3c6bda}} 
+\index{limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}!Only\+\_\+\+One\+\_\+\+Edge@{Only\+\_\+\+One\+\_\+\+Edge}}
+\index{Only\+\_\+\+One\+\_\+\+Edge@{Only\+\_\+\+One\+\_\+\+Edge}!limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}}
+\subsubsection{\texorpdfstring{Only\+\_\+\+One\+\_\+\+Edge()}{Only\_One\_Edge()}}
+{\footnotesize\ttfamily bool Only\+\_\+\+One\+\_\+\+Edge (\begin{DoxyParamCaption}\item[{int}]{node\+Num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton__ant_colony_8cpp_a0e73c81e6bc1233a28f20dc32d89d6bb}\label{limorton__ant_colony_8cpp_a0e73c81e6bc1233a28f20dc32d89d6bb}} 
+\index{limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}!Set\+\_\+\+Node\+\_\+\+Priority@{Set\+\_\+\+Node\+\_\+\+Priority}}
+\index{Set\+\_\+\+Node\+\_\+\+Priority@{Set\+\_\+\+Node\+\_\+\+Priority}!limorton\+\_\+ant\+Colony.\+cpp@{limorton\+\_\+ant\+Colony.\+cpp}}
+\subsubsection{\texorpdfstring{Set\+\_\+\+Node\+\_\+\+Priority()}{Set\_Node\_Priority()}}
+{\footnotesize\ttfamily int Set\+\_\+\+Node\+\_\+\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+启发式\+: 
+

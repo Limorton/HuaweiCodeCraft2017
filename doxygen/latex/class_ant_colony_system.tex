@@ -1,0 +1,87 @@
+\hypertarget{class_ant_colony_system}{}\section{Ant\+Colony\+System类 参考}
+\label{class_ant_colony_system}\index{Ant\+Colony\+System@{Ant\+Colony\+System}}
+
+
+{\ttfamily \#include $<$limorton\+\_\+ant\+Colony.\+h$>$}
+
+
+
+Ant\+Colony\+System 的协作图\+:
+% FIG 0
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ant_colony_system_acf72f4454119e265be31138b2b2d626a}{Ant\+Colony\+System} ()
+\item 
+void \hyperlink{class_ant_colony_system_a999349b4ad5d3d0bdf6d4b033482c941}{Init\+\_\+\+Parameter} ()
+\item 
+double \hyperlink{class_ant_colony_system_a4075c8d1df3c93da49d15996a00f9b27}{Transition\+\_\+\+Chance} (int current\+Node, int next\+Node)
+\item 
+void \hyperlink{class_ant_colony_system_ab0c9ef616e5754c3d9a4b3f18758c29d}{Update\+\_\+\+Local\+\_\+\+Path\+\_\+\+Rules} (int current\+Node, int next\+Node, int ant\+Life, int Lnn)
+\item 
+void \hyperlink{class_ant_colony_system_a0131a66f37712412b646f6a960c99e50}{Update\+\_\+\+Global\+\_\+\+Rules} (const vector$<$ int $>$ \&global\+\_\+min\+Path, int global\+\_\+min\+Cost)
+\item 
+void \hyperlink{class_ant_colony_system_acf653737ac9309168903332e38ea25f8}{Estimate\+\_\+\+Graph} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_evaluater}{Evaluater} \hyperlink{class_ant_colony_system_a9445ee19c15eb281300ea0476733edac}{evaluate}
+\end{DoxyCompactItemize}
+
+
+\subsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_ant_colony_system_acf72f4454119e265be31138b2b2d626a}\label{class_ant_colony_system_acf72f4454119e265be31138b2b2d626a}} 
+\index{Ant\+Colony\+System@{Ant\+Colony\+System}!Ant\+Colony\+System@{Ant\+Colony\+System}}
+\index{Ant\+Colony\+System@{Ant\+Colony\+System}!Ant\+Colony\+System@{Ant\+Colony\+System}}
+\subsubsection{\texorpdfstring{Ant\+Colony\+System()}{AntColonySystem()}}
+{\footnotesize\ttfamily Ant\+Colony\+System\+::\+Ant\+Colony\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{class_ant_colony_system_acf653737ac9309168903332e38ea25f8}\label{class_ant_colony_system_acf653737ac9309168903332e38ea25f8}} 
+\index{Ant\+Colony\+System@{Ant\+Colony\+System}!Estimate\+\_\+\+Graph@{Estimate\+\_\+\+Graph}}
+\index{Estimate\+\_\+\+Graph@{Estimate\+\_\+\+Graph}!Ant\+Colony\+System@{Ant\+Colony\+System}}
+\subsubsection{\texorpdfstring{Estimate\+\_\+\+Graph()}{Estimate\_Graph()}}
+{\footnotesize\ttfamily void Ant\+Colony\+System\+::\+Estimate\+\_\+\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ant_colony_system_a999349b4ad5d3d0bdf6d4b033482c941}\label{class_ant_colony_system_a999349b4ad5d3d0bdf6d4b033482c941}} 
+\index{Ant\+Colony\+System@{Ant\+Colony\+System}!Init\+\_\+\+Parameter@{Init\+\_\+\+Parameter}}
+\index{Init\+\_\+\+Parameter@{Init\+\_\+\+Parameter}!Ant\+Colony\+System@{Ant\+Colony\+System}}
+\subsubsection{\texorpdfstring{Init\+\_\+\+Parameter()}{Init\_Parameter()}}
+{\footnotesize\ttfamily void Ant\+Colony\+System\+::\+Init\+\_\+\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ant_colony_system_a4075c8d1df3c93da49d15996a00f9b27}\label{class_ant_colony_system_a4075c8d1df3c93da49d15996a00f9b27}} 
+\index{Ant\+Colony\+System@{Ant\+Colony\+System}!Transition\+\_\+\+Chance@{Transition\+\_\+\+Chance}}
+\index{Transition\+\_\+\+Chance@{Transition\+\_\+\+Chance}!Ant\+Colony\+System@{Ant\+Colony\+System}}
+\subsubsection{\texorpdfstring{Transition\+\_\+\+Chance()}{Transition\_Chance()}}
+{\footnotesize\ttfamily double Ant\+Colony\+System\+::\+Transition\+\_\+\+Chance (\begin{DoxyParamCaption}\item[{int}]{current\+Node,  }\item[{int}]{next\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ant_colony_system_a0131a66f37712412b646f6a960c99e50}\label{class_ant_colony_system_a0131a66f37712412b646f6a960c99e50}} 
+\index{Ant\+Colony\+System@{Ant\+Colony\+System}!Update\+\_\+\+Global\+\_\+\+Rules@{Update\+\_\+\+Global\+\_\+\+Rules}}
+\index{Update\+\_\+\+Global\+\_\+\+Rules@{Update\+\_\+\+Global\+\_\+\+Rules}!Ant\+Colony\+System@{Ant\+Colony\+System}}
+\subsubsection{\texorpdfstring{Update\+\_\+\+Global\+\_\+\+Rules()}{Update\_Global\_Rules()}}
+{\footnotesize\ttfamily void Ant\+Colony\+System\+::\+Update\+\_\+\+Global\+\_\+\+Rules (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{global\+\_\+min\+Path,  }\item[{int}]{global\+\_\+min\+Cost }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ant_colony_system_ab0c9ef616e5754c3d9a4b3f18758c29d}\label{class_ant_colony_system_ab0c9ef616e5754c3d9a4b3f18758c29d}} 
+\index{Ant\+Colony\+System@{Ant\+Colony\+System}!Update\+\_\+\+Local\+\_\+\+Path\+\_\+\+Rules@{Update\+\_\+\+Local\+\_\+\+Path\+\_\+\+Rules}}
+\index{Update\+\_\+\+Local\+\_\+\+Path\+\_\+\+Rules@{Update\+\_\+\+Local\+\_\+\+Path\+\_\+\+Rules}!Ant\+Colony\+System@{Ant\+Colony\+System}}
+\subsubsection{\texorpdfstring{Update\+\_\+\+Local\+\_\+\+Path\+\_\+\+Rules()}{Update\_Local\_Path\_Rules()}}
+{\footnotesize\ttfamily void Ant\+Colony\+System\+::\+Update\+\_\+\+Local\+\_\+\+Path\+\_\+\+Rules (\begin{DoxyParamCaption}\item[{int}]{current\+Node,  }\item[{int}]{next\+Node,  }\item[{int}]{ant\+Life,  }\item[{int}]{Lnn }\end{DoxyParamCaption})}
+
+
+
+\subsection{类成员变量说明}
+\mbox{\Hypertarget{class_ant_colony_system_a9445ee19c15eb281300ea0476733edac}\label{class_ant_colony_system_a9445ee19c15eb281300ea0476733edac}} 
+\index{Ant\+Colony\+System@{Ant\+Colony\+System}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Ant\+Colony\+System@{Ant\+Colony\+System}}
+\subsubsection{\texorpdfstring{evaluate}{evaluate}}
+{\footnotesize\ttfamily \hyperlink{struct_evaluater}{Evaluater} Ant\+Colony\+System\+::evaluate}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/\hyperlink{limorton__ant_colony_8h}{limorton\+\_\+ant\+Colony.\+h}\item 
+H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/\hyperlink{limorton__ant_colony_8cpp}{limorton\+\_\+ant\+Colony.\+cpp}\end{DoxyCompactItemize}

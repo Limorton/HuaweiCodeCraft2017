@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: H:/Limorton&#39;s Code/HUAWEI/lib_io.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84e7a5db4faa3bb3efa0834f14a17625.html">H:</a></li><li class="navelem"><a class="el" href="dir_5ee327bd28d0005262fd55b01f6dc867.html">Limorton&#39;s Code</a></li><li class="navelem"><a class="el" href="dir_0b23d9f944b3db037a33b0ca33d66994.html">HUAWEI</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">lib_io.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lib__io_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __LIB_IO_H__</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __LIB_IO_H__</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="lib__io_8h.html#a5e17bfd66025e3f6293a10a5b507b3f6">    4</a></span>&#160;<span class="preprocessor">#define MAX_EDGE_NUM    (2000 * 20)</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//读取文件并按行输出到buff。</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//buff为一个指针数组，每一个元素是一个字符指针，对应文件中一行的内容。</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//spec为允许解析的最大行数。</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//返回文件实际行数</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="lib_2lib__io_8h.html#a708ad21ddaefbe61c2eb2ccfa830fc27">read_file</a>(<span class="keywordtype">char</span> ** <span class="keyword">const</span> buff, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> spec, <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> filename);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//将result缓冲区中的内容写入文件，写入方式为覆盖写入</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="lib_2lib__io_8h.html#a25431423c5cb8a43c0119c62e4e120cb">write_result</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> buff,<span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> filename);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//释放读文件的缓冲区</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="lib_2lib__io_8h.html#adc4a454a96742f1b3dae623d8ed4c288">release_buff</a>(<span class="keywordtype">char</span> ** <span class="keyword">const</span> buff, <span class="keyword">const</span> <span class="keywordtype">int</span> valid_item_num);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="ttc" id="lib_2lib__io_8h_html_adc4a454a96742f1b3dae623d8ed4c288"><div class="ttname"><a href="lib_2lib__io_8h.html#adc4a454a96742f1b3dae623d8ed4c288">release_buff</a></div><div class="ttdeci">void release_buff(char **const buff, const int valid_item_num)</div><div class="ttdef"><b>Definition:</b> io.cpp:84</div></div>
+<div class="ttc" id="lib_2lib__io_8h_html_a708ad21ddaefbe61c2eb2ccfa830fc27"><div class="ttname"><a href="lib_2lib__io_8h.html#a708ad21ddaefbe61c2eb2ccfa830fc27">read_file</a></div><div class="ttdeci">int read_file(char **const buff, const unsigned int spec, const char *const filename)</div><div class="ttdef"><b>Definition:</b> io.cpp:49</div></div>
+<div class="ttc" id="lib_2lib__io_8h_html_a25431423c5cb8a43c0119c62e4e120cb"><div class="ttname"><a href="lib_2lib__io_8h.html#a25431423c5cb8a43c0119c62e4e120cb">write_result</a></div><div class="ttdeci">void write_result(const char *const buff, const char *const filename)</div><div class="ttdef"><b>Definition:</b> io.cpp:77</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

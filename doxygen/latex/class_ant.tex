@@ -1,0 +1,89 @@
+\hypertarget{class_ant}{}\section{Ant类 参考}
+\label{class_ant}\index{Ant@{Ant}}
+
+
+{\ttfamily \#include $<$limorton\+\_\+ant\+Colony.\+h$>$}
+
+
+
+Ant 的协作图\+:
+% FIG 0
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ant_a9e0650e2ef29724da8f8f8a041e87928}{Ant} (\hyperlink{class_ant_colony_system}{Ant\+Colony\+System} $\ast$acs, int start, int life, \hyperlink{limorton__ant_colony_8h_a6557ba74979e13748c8317df32f24d3a}{Excite} excite)
+\item 
+void \hyperlink{class_ant_a723d84c7f27f716b6632108e196ed513}{Search} (int Lnn)
+\item 
+int \hyperlink{class_ant_a44da4dbcbab045b0a226c54e1a8ae391}{Choose\+\_\+\+Next} (int \&min\+Band)
+\item 
+void \hyperlink{class_ant_af520d2c85aa44726d7ded378b97eab9b}{Move\+\_\+to\+\_\+\+Next\+\_\+\+Node} (int next\+Node)
+\item 
+int \hyperlink{class_ant_a6b39f50c57698a6ee11324d125c5e6cb}{Get\+\_\+\+Start\+Node} ()
+\item 
+int \hyperlink{class_ant_a546f01cf456bf3c47112658c31d53758}{Get\+\_\+\+Current\+Cost} ()
+\item 
+int \hyperlink{class_ant_aa3accfa6372b99983560c9dc4fde69ab}{Get\+\_\+\+Current\+Bandmin} ()
+\item 
+vector$<$ int $>$ \hyperlink{class_ant_a5f6ea0abcb484f61b867b577b5deb7ce}{Get\+\_\+\+Route} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_ant_a9e0650e2ef29724da8f8f8a041e87928}\label{class_ant_a9e0650e2ef29724da8f8f8a041e87928}} 
+\index{Ant@{Ant}!Ant@{Ant}}
+\index{Ant@{Ant}!Ant@{Ant}}
+\subsubsection{\texorpdfstring{Ant()}{Ant()}}
+{\footnotesize\ttfamily Ant\+::\+Ant (\begin{DoxyParamCaption}\item[{\hyperlink{class_ant_colony_system}{Ant\+Colony\+System} $\ast$}]{acs,  }\item[{int}]{start,  }\item[{int}]{life,  }\item[{\hyperlink{limorton__ant_colony_8h_a6557ba74979e13748c8317df32f24d3a}{Excite}}]{excite }\end{DoxyParamCaption})}
+
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{class_ant_a44da4dbcbab045b0a226c54e1a8ae391}\label{class_ant_a44da4dbcbab045b0a226c54e1a8ae391}} 
+\index{Ant@{Ant}!Choose\+\_\+\+Next@{Choose\+\_\+\+Next}}
+\index{Choose\+\_\+\+Next@{Choose\+\_\+\+Next}!Ant@{Ant}}
+\subsubsection{\texorpdfstring{Choose\+\_\+\+Next()}{Choose\_Next()}}
+{\footnotesize\ttfamily int Ant\+::\+Choose\+\_\+\+Next (\begin{DoxyParamCaption}\item[{int \&}]{min\+Band }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ant_aa3accfa6372b99983560c9dc4fde69ab}\label{class_ant_aa3accfa6372b99983560c9dc4fde69ab}} 
+\index{Ant@{Ant}!Get\+\_\+\+Current\+Bandmin@{Get\+\_\+\+Current\+Bandmin}}
+\index{Get\+\_\+\+Current\+Bandmin@{Get\+\_\+\+Current\+Bandmin}!Ant@{Ant}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+Current\+Bandmin()}{Get\_CurrentBandmin()}}
+{\footnotesize\ttfamily int Ant\+::\+Get\+\_\+\+Current\+Bandmin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ant_a546f01cf456bf3c47112658c31d53758}\label{class_ant_a546f01cf456bf3c47112658c31d53758}} 
+\index{Ant@{Ant}!Get\+\_\+\+Current\+Cost@{Get\+\_\+\+Current\+Cost}}
+\index{Get\+\_\+\+Current\+Cost@{Get\+\_\+\+Current\+Cost}!Ant@{Ant}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+Current\+Cost()}{Get\_CurrentCost()}}
+{\footnotesize\ttfamily int Ant\+::\+Get\+\_\+\+Current\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ant_a5f6ea0abcb484f61b867b577b5deb7ce}\label{class_ant_a5f6ea0abcb484f61b867b577b5deb7ce}} 
+\index{Ant@{Ant}!Get\+\_\+\+Route@{Get\+\_\+\+Route}}
+\index{Get\+\_\+\+Route@{Get\+\_\+\+Route}!Ant@{Ant}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+Route()}{Get\_Route()}}
+{\footnotesize\ttfamily vector$<$int$>$ Ant\+::\+Get\+\_\+\+Route (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ant_a6b39f50c57698a6ee11324d125c5e6cb}\label{class_ant_a6b39f50c57698a6ee11324d125c5e6cb}} 
+\index{Ant@{Ant}!Get\+\_\+\+Start\+Node@{Get\+\_\+\+Start\+Node}}
+\index{Get\+\_\+\+Start\+Node@{Get\+\_\+\+Start\+Node}!Ant@{Ant}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+Start\+Node()}{Get\_StartNode()}}
+{\footnotesize\ttfamily int Ant\+::\+Get\+\_\+\+Start\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ant_af520d2c85aa44726d7ded378b97eab9b}\label{class_ant_af520d2c85aa44726d7ded378b97eab9b}} 
+\index{Ant@{Ant}!Move\+\_\+to\+\_\+\+Next\+\_\+\+Node@{Move\+\_\+to\+\_\+\+Next\+\_\+\+Node}}
+\index{Move\+\_\+to\+\_\+\+Next\+\_\+\+Node@{Move\+\_\+to\+\_\+\+Next\+\_\+\+Node}!Ant@{Ant}}
+\subsubsection{\texorpdfstring{Move\+\_\+to\+\_\+\+Next\+\_\+\+Node()}{Move\_to\_Next\_Node()}}
+{\footnotesize\ttfamily void Ant\+::\+Move\+\_\+to\+\_\+\+Next\+\_\+\+Node (\begin{DoxyParamCaption}\item[{int}]{next\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ant_a723d84c7f27f716b6632108e196ed513}\label{class_ant_a723d84c7f27f716b6632108e196ed513}} 
+\index{Ant@{Ant}!Search@{Search}}
+\index{Search@{Search}!Ant@{Ant}}
+\subsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily void Ant\+::\+Search (\begin{DoxyParamCaption}\item[{int}]{Lnn }\end{DoxyParamCaption})}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/\hyperlink{limorton__ant_colony_8h}{limorton\+\_\+ant\+Colony.\+h}\item 
+H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/\hyperlink{limorton__ant_colony_8cpp}{limorton\+\_\+ant\+Colony.\+cpp}\end{DoxyCompactItemize}

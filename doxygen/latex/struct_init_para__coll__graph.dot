@@ -1,0 +1,6 @@
+digraph "InitPara"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{InitPara\n|+ phe_max\l+ phe_min\l+ edgePeromone\l+ alpha\l+ beta\l+ rou\l+ rou_local\l+ q_zero\l+ loop_MAX\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

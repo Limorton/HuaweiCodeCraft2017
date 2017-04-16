@@ -1,0 +1,516 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: H:/Limorton&#39;s Code/HUAWEI/limorton_Graph.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84e7a5db4faa3bb3efa0834f14a17625.html">H:</a></li><li class="navelem"><a class="el" href="dir_5ee327bd28d0005262fd55b01f6dc867.html">Limorton&#39;s Code</a></li><li class="navelem"><a class="el" href="dir_0b23d9f944b3db037a33b0ca33d66994.html">HUAWEI</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">limorton_Graph.cpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="limorton___graph_8h_source.html">limorton_Graph.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lib__io_8h_source.html">lib_io.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lib__time_8h_source.html">lib_time.h</a>&quot;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+limorton_Graph.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="limorton___graph_8cpp__incl.png" border="0" usemap="#_h_1_2_limorton's_01_code_2_h_u_a_w_e_i_2limorton___graph_8cpp" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ac48d3ff248f1a594452a296a4164f53e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#ac48d3ff248f1a594452a296a4164f53e">Print_Edges</a> (int i)</td></tr>
+<tr class="memdesc:ac48d3ff248f1a594452a296a4164f53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出显示结点i的出边  <a href="#ac48d3ff248f1a594452a296a4164f53e">更多...</a><br /></td></tr>
+<tr class="separator:ac48d3ff248f1a594452a296a4164f53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1426b5659291f61a5104267ff192d51e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#a1426b5659291f61a5104267ff192d51e">Init_Graph</a> (char **topo)</td></tr>
+<tr class="memdesc:a1426b5659291f61a5104267ff192d51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始拓扑图  <a href="#a1426b5659291f61a5104267ff192d51e">更多...</a><br /></td></tr>
+<tr class="separator:a1426b5659291f61a5104267ff192d51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d890a6a2ecc44125550cd59052c42ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#a6d890a6a2ecc44125550cd59052c42ae">Add_OneEdge</a> (int head, int tail, int band, int r_band, int rent)</td></tr>
+<tr class="memdesc:a6d890a6a2ecc44125550cd59052c42ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加一条边  <a href="#a6d890a6a2ecc44125550cd59052c42ae">更多...</a><br /></td></tr>
+<tr class="separator:a6d890a6a2ecc44125550cd59052c42ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae328381a12e2df1ef0ca2b040d6b5b77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#ae328381a12e2df1ef0ca2b040d6b5b77">Delete_OneEdge</a> (int head, int tail)</td></tr>
+<tr class="memdesc:ae328381a12e2df1ef0ca2b040d6b5b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除一条边  <a href="#ae328381a12e2df1ef0ca2b040d6b5b77">更多...</a><br /></td></tr>
+<tr class="separator:ae328381a12e2df1ef0ca2b040d6b5b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d15bbe793e751572d252667e7671884"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#a4d15bbe793e751572d252667e7671884">Add_SuperSourceNodeEdge</a> (const vector&lt; int &gt; &amp;ServerNode)</td></tr>
+<tr class="memdesc:a4d15bbe793e751572d252667e7671884"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加超级源边  <a href="#a4d15bbe793e751572d252667e7671884">更多...</a><br /></td></tr>
+<tr class="separator:a4d15bbe793e751572d252667e7671884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2360fcdf387e3b49a5942822d7babc7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#a2360fcdf387e3b49a5942822d7babc7b">Destory_SuperSourceNodeEdge</a> (const vector&lt; int &gt; &amp;ServerNode)</td></tr>
+<tr class="memdesc:a2360fcdf387e3b49a5942822d7babc7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除超级源边  <a href="#a2360fcdf387e3b49a5942822d7babc7b">更多...</a><br /></td></tr>
+<tr class="separator:a2360fcdf387e3b49a5942822d7babc7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab511e72fc454e5294e8ac1c5cd60c344"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#ab511e72fc454e5294e8ac1c5cd60c344">Add_SuperEndNodeEdge</a> ()</td></tr>
+<tr class="memdesc:ab511e72fc454e5294e8ac1c5cd60c344"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加超级汇边  <a href="#ab511e72fc454e5294e8ac1c5cd60c344">更多...</a><br /></td></tr>
+<tr class="separator:ab511e72fc454e5294e8ac1c5cd60c344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5b96ae02e90e6f0f73b129e3a61609"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#a4b5b96ae02e90e6f0f73b129e3a61609">Destory_SuperEndNodeEdge</a> ()</td></tr>
+<tr class="memdesc:a4b5b96ae02e90e6f0f73b129e3a61609"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除超级汇边  <a href="#a4b5b96ae02e90e6f0f73b129e3a61609">更多...</a><br /></td></tr>
+<tr class="separator:a4b5b96ae02e90e6f0f73b129e3a61609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9800f10ab30f0d8fb54ad22d8bbb7c33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#a9800f10ab30f0d8fb54ad22d8bbb7c33">Create_Graph</a> (char **topo)</td></tr>
+<tr class="memdesc:a9800f10ab30f0d8fb54ad22d8bbb7c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成拓扑图  <a href="#a9800f10ab30f0d8fb54ad22d8bbb7c33">更多...</a><br /></td></tr>
+<tr class="separator:a9800f10ab30f0d8fb54ad22d8bbb7c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56343109407e915d829e22e4e0200019"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#a56343109407e915d829e22e4e0200019">Destory_Graph</a> ()</td></tr>
+<tr class="memdesc:a56343109407e915d829e22e4e0200019"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除拓扑图空间  <a href="#a56343109407e915d829e22e4e0200019">更多...</a><br /></td></tr>
+<tr class="separator:a56343109407e915d829e22e4e0200019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a438575684bed712b4a2b999908f921be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#a438575684bed712b4a2b999908f921be">Print_Graph</a> ()</td></tr>
+<tr class="memdesc:a438575684bed712b4a2b999908f921be"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示拓扑图  <a href="#a438575684bed712b4a2b999908f921be">更多...</a><br /></td></tr>
+<tr class="separator:a438575684bed712b4a2b999908f921be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3a0620b381dd5188428797f678ef53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#a1c3a0620b381dd5188428797f678ef53">Check_Edge</a> (int i, int j)</td></tr>
+<tr class="memdesc:a1c3a0620b381dd5188428797f678ef53"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回边的已用带宽  <a href="#a1c3a0620b381dd5188428797f678ef53">更多...</a><br /></td></tr>
+<tr class="separator:a1c3a0620b381dd5188428797f678ef53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60ca14c1423fe5f1c682c87c7a9c47d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#ad60ca14c1423fe5f1c682c87c7a9c47d">Check_Band</a> (int i, int j)</td></tr>
+<tr class="memdesc:ad60ca14c1423fe5f1c682c87c7a9c47d"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回边的剩余带宽  <a href="#ad60ca14c1423fe5f1c682c87c7a9c47d">更多...</a><br /></td></tr>
+<tr class="separator:ad60ca14c1423fe5f1c682c87c7a9c47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcdbe75171241ee84075ed2deac053f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#abcdbe75171241ee84075ed2deac053f1">Get_Band</a> (int i, int j)</td></tr>
+<tr class="memdesc:abcdbe75171241ee84075ed2deac053f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回边的初始带宽  <a href="#abcdbe75171241ee84075ed2deac053f1">更多...</a><br /></td></tr>
+<tr class="separator:abcdbe75171241ee84075ed2deac053f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b1246ecdf53785ccd56dc40d9a55ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#ae6b1246ecdf53785ccd56dc40d9a55ac">Get_Rent</a> (int i, int j)</td></tr>
+<tr class="memdesc:ae6b1246ecdf53785ccd56dc40d9a55ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回边的租金  <a href="#ae6b1246ecdf53785ccd56dc40d9a55ac">更多...</a><br /></td></tr>
+<tr class="separator:ae6b1246ecdf53785ccd56dc40d9a55ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:afba2e40a7cb5dccf3452a683c66d9f2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_video_net_graph.html">VideoNetGraph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="limorton___graph_8cpp.html#afba2e40a7cb5dccf3452a683c66d9f2c">graph</a></td></tr>
+<tr class="separator:afba2e40a7cb5dccf3452a683c66d9f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a6d890a6a2ecc44125550cd59052c42ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d890a6a2ecc44125550cd59052c42ae">&#9670;&nbsp;</a></span>Add_OneEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add_OneEdge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>head</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>band</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r_band</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加一条边 </p>
+
+</div>
+</div>
+<a id="ab511e72fc454e5294e8ac1c5cd60c344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab511e72fc454e5294e8ac1c5cd60c344">&#9670;&nbsp;</a></span>Add_SuperEndNodeEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add_SuperEndNodeEdge </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加超级汇边 </p>
+
+</div>
+</div>
+<a id="a4d15bbe793e751572d252667e7671884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d15bbe793e751572d252667e7671884">&#9670;&nbsp;</a></span>Add_SuperSourceNodeEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add_SuperSourceNodeEdge </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ServerNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加超级源边 </p>
+
+</div>
+</div>
+<a id="ad60ca14c1423fe5f1c682c87c7a9c47d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60ca14c1423fe5f1c682c87c7a9c47d">&#9670;&nbsp;</a></span>Check_Band()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Check_Band </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回边的剩余带宽 </p>
+
+</div>
+</div>
+<a id="a1c3a0620b381dd5188428797f678ef53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c3a0620b381dd5188428797f678ef53">&#9670;&nbsp;</a></span>Check_Edge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Check_Edge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回边的已用带宽 </p>
+
+</div>
+</div>
+<a id="a9800f10ab30f0d8fb54ad22d8bbb7c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9800f10ab30f0d8fb54ad22d8bbb7c33">&#9670;&nbsp;</a></span>Create_Graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Create_Graph </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>topo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>生成拓扑图 </p>
+
+</div>
+</div>
+<a id="ae328381a12e2df1ef0ca2b040d6b5b77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae328381a12e2df1ef0ca2b040d6b5b77">&#9670;&nbsp;</a></span>Delete_OneEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Delete_OneEdge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>head</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tail</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除一条边 </p>
+
+</div>
+</div>
+<a id="a56343109407e915d829e22e4e0200019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56343109407e915d829e22e4e0200019">&#9670;&nbsp;</a></span>Destory_Graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Destory_Graph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除拓扑图空间 </p>
+
+</div>
+</div>
+<a id="a4b5b96ae02e90e6f0f73b129e3a61609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b5b96ae02e90e6f0f73b129e3a61609">&#9670;&nbsp;</a></span>Destory_SuperEndNodeEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Destory_SuperEndNodeEdge </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除超级汇边 </p>
+
+</div>
+</div>
+<a id="a2360fcdf387e3b49a5942822d7babc7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2360fcdf387e3b49a5942822d7babc7b">&#9670;&nbsp;</a></span>Destory_SuperSourceNodeEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Destory_SuperSourceNodeEdge </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ServerNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除超级源边 </p>
+
+</div>
+</div>
+<a id="abcdbe75171241ee84075ed2deac053f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcdbe75171241ee84075ed2deac053f1">&#9670;&nbsp;</a></span>Get_Band()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Get_Band </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回边的初始带宽 </p>
+
+</div>
+</div>
+<a id="ae6b1246ecdf53785ccd56dc40d9a55ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b1246ecdf53785ccd56dc40d9a55ac">&#9670;&nbsp;</a></span>Get_Rent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Get_Rent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回边的租金 </p>
+
+</div>
+</div>
+<a id="a1426b5659291f61a5104267ff192d51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1426b5659291f61a5104267ff192d51e">&#9670;&nbsp;</a></span>Init_Graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Init_Graph </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>topo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始拓扑图 </p>
+
+</div>
+</div>
+<a id="ac48d3ff248f1a594452a296a4164f53e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac48d3ff248f1a594452a296a4164f53e">&#9670;&nbsp;</a></span>Print_Edges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Print_Edges </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>输出显示结点i的出边 </p>
+
+</div>
+</div>
+<a id="a438575684bed712b4a2b999908f921be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a438575684bed712b4a2b999908f921be">&#9670;&nbsp;</a></span>Print_Graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Print_Graph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>显示拓扑图 </p>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="afba2e40a7cb5dccf3452a683c66d9f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba2e40a7cb5dccf3452a683c66d9f2c">&#9670;&nbsp;</a></span>graph</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_video_net_graph.html">VideoNetGraph</a> graph</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

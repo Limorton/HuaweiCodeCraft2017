@@ -1,0 +1,227 @@
+\hypertarget{limorton__dijkstra_8h}{}\section{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+dijkstra.h 文件参考}
+\label{limorton__dijkstra_8h}\index{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+dijkstra.\+h@{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+dijkstra.\+h}}
+{\ttfamily \#include \char`\"{}limorton\+\_\+\+Graph.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+limorton\+\_\+dijkstra.\+h 的引用(Include)关系图\+:
+% FIG 0
+此图展示该文件直接或间接的被哪些文件引用了\+:
+% FIG 1
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmin__path}{min\+\_\+path}
+\item 
+struct \hyperlink{structcmp2node}{cmp2node}
+\begin{DoxyCompactList}\small\item\em 比较两条链路租金，找较小的 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{limorton__dijkstra_8h_ab73b756a9571f83eaa1ba2679ebd0d28}{min\+AB} (int a, int b)
+\item 
+void \hyperlink{limorton__dijkstra_8h_a4408e16e6f56f3f253368efae20a1462}{Dfs\+\_\+\+Cut\+Edge} (int cur, int father)
+\begin{DoxyCompactList}\small\item\em 用\+Tarjan算法求图的割边 \end{DoxyCompactList}\item 
+void \hyperlink{limorton__dijkstra_8h_a975e251b27f292f638e594e08a5e6db7}{Init\+\_\+\+Global\+\_\+\+Variable} ()
+\item 
+void \hyperlink{limorton__dijkstra_8h_a2e30b637b0f5c03e43cdb05fe10a457d}{Reset\+\_\+\+Variable} ()
+\item 
+void \hyperlink{limorton__dijkstra_8h_af1ca4aa24096da2049e401e440aaecfc}{Dijkstra} (const \hyperlink{struct_customer}{Customer} \&start)
+\item 
+void \hyperlink{limorton__dijkstra_8h_adc1bb62c77495116243347748bd006df}{Run\+\_\+\+Dijkstra} (const vector$<$ int $>$ \&be\+Cust\+Ser)
+\item 
+bool \hyperlink{limorton__dijkstra_8h_a058885b5a319f595c83afa0d4c3cdc85}{Not\+Custto\+Node} (int node\+Num)
+\begin{DoxyCompactList}\small\item\em 判断是否是消费结点连接的结点 \end{DoxyCompactList}\item 
+int \hyperlink{limorton__dijkstra_8h_add6c48bfcf9ce05f235dfc14d2600a81}{Count\+Near\+Server} (int node\+Num)
+\begin{DoxyCompactList}\small\item\em 求附近已设置服务器的结点的数量 \end{DoxyCompactList}\item 
+int \hyperlink{limorton__dijkstra_8h_ac12b86623d35d3624e6d93da19233fb0}{Cust\+\_\+\+Connect} (int node\+Num)
+\begin{DoxyCompactList}\small\item\em 由网络节点求其连接的消费结点 \end{DoxyCompactList}\item 
+bool \hyperlink{limorton__dijkstra_8h_a3d2c1c7b9f75da57d5b71fcc2c3c6bda}{Only\+\_\+\+One\+\_\+\+Edge} (int node\+Num)
+\begin{DoxyCompactList}\small\item\em 启发式：当一个网络结点仅有一条出边，且无消费结点连接时,一定不会是服务器结点 \end{DoxyCompactList}\item 
+bool \hyperlink{limorton__dijkstra_8h_a5fdc497b6ac1986b36ac494861e737f9}{Flux\+\_\+\+Over\+\_\+\+Flow} (int custom\+Num)
+\item 
+bool \hyperlink{limorton__dijkstra_8h_a668fd9c729dd06e718bfc79479bf6c26}{Cost\+\_\+\+Bigger\+\_\+\+Node} (int cust\+Num)
+\begin{DoxyCompactList}\small\item\em 启发式：需求不超带宽的前提下，可能的最小流量花销大于单个服务器安装费用 \end{DoxyCompactList}\item 
+void \hyperlink{limorton__dijkstra_8h_a3e8b73d5ea5fbf33014295180a6291df}{Paint\+\_\+\+Node} (int node\+Num)
+\begin{DoxyCompactList}\small\item\em 为结点着色 \end{DoxyCompactList}\item 
+bool \hyperlink{limorton__dijkstra_8h_a1f4213f22d050d7b8836cafead983a7d}{has\+Cust} (int color)
+\begin{DoxyCompactList}\small\item\em 判断color的结点集合是否有服务器 \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{limorton__dijkstra_8h_a910599af1f8c1ff8f4a5fddb86c37906}{Find\+\_\+\+Lonely\+\_\+\+Node} ()
+\begin{DoxyCompactList}\small\item\em 删除孤立结点的边，并返回孤立结点集合 \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{limorton__dijkstra_8h_afe6a51ee6d4a0aa9e1909d71510c046b}{Find\+\_\+\+Be\+\_\+\+Node} ()
+\begin{DoxyCompactList}\small\item\em 找到必就近设服务器的消费结点，并返回对应连接结点编号集合 \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{limorton__dijkstra_8h_a65a9ae35388abf14abc064d0f3cae205}{Find\+\_\+\+Be\+\_\+\+Cust} (const vector$<$ int $>$ \&be\+Servers)
+\begin{DoxyCompactList}\small\item\em 找到必就近设服务器的消费结点，并返回消费结点编号集合 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{limorton__dijkstra_8h_a750b5d744c39a06bfb13e6eb010e35d0}{index} = 0
+\item 
+vector$<$ int $>$ \hyperlink{limorton__dijkstra_8h_a73002ae626d985c25366a1ba4641fcc2}{flags}
+\end{DoxyCompactItemize}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{limorton__dijkstra_8h_a668fd9c729dd06e718bfc79479bf6c26}\label{limorton__dijkstra_8h_a668fd9c729dd06e718bfc79479bf6c26}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Cost\+\_\+\+Bigger\+\_\+\+Node@{Cost\+\_\+\+Bigger\+\_\+\+Node}}
+\index{Cost\+\_\+\+Bigger\+\_\+\+Node@{Cost\+\_\+\+Bigger\+\_\+\+Node}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Cost\+\_\+\+Bigger\+\_\+\+Node()}{Cost\_Bigger\_Node()}}
+{\footnotesize\ttfamily bool Cost\+\_\+\+Bigger\+\_\+\+Node (\begin{DoxyParamCaption}\item[{int}]{cust\+Num }\end{DoxyParamCaption})}
+
+
+
+启发式：需求不超带宽的前提下，可能的最小流量花销大于单个服务器安装费用 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_add6c48bfcf9ce05f235dfc14d2600a81}\label{limorton__dijkstra_8h_add6c48bfcf9ce05f235dfc14d2600a81}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Count\+Near\+Server@{Count\+Near\+Server}}
+\index{Count\+Near\+Server@{Count\+Near\+Server}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Count\+Near\+Server()}{CountNearServer()}}
+{\footnotesize\ttfamily int Count\+Near\+Server (\begin{DoxyParamCaption}\item[{int}]{node\+Num }\end{DoxyParamCaption})}
+
+
+
+求附近已设置服务器的结点的数量 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_ac12b86623d35d3624e6d93da19233fb0}\label{limorton__dijkstra_8h_ac12b86623d35d3624e6d93da19233fb0}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Cust\+\_\+\+Connect@{Cust\+\_\+\+Connect}}
+\index{Cust\+\_\+\+Connect@{Cust\+\_\+\+Connect}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Cust\+\_\+\+Connect()}{Cust\_Connect()}}
+{\footnotesize\ttfamily int Cust\+\_\+\+Connect (\begin{DoxyParamCaption}\item[{int}]{node\+Num }\end{DoxyParamCaption})}
+
+
+
+由网络节点求其连接的消费结点 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_a4408e16e6f56f3f253368efae20a1462}\label{limorton__dijkstra_8h_a4408e16e6f56f3f253368efae20a1462}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Dfs\+\_\+\+Cut\+Edge@{Dfs\+\_\+\+Cut\+Edge}}
+\index{Dfs\+\_\+\+Cut\+Edge@{Dfs\+\_\+\+Cut\+Edge}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Dfs\+\_\+\+Cut\+Edge()}{Dfs\_CutEdge()}}
+{\footnotesize\ttfamily void Dfs\+\_\+\+Cut\+Edge (\begin{DoxyParamCaption}\item[{int}]{cur,  }\item[{int}]{father }\end{DoxyParamCaption})}
+
+
+
+用\+Tarjan算法求图的割边 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_af1ca4aa24096da2049e401e440aaecfc}\label{limorton__dijkstra_8h_af1ca4aa24096da2049e401e440aaecfc}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Dijkstra@{Dijkstra}}
+\index{Dijkstra@{Dijkstra}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Dijkstra()}{Dijkstra()}}
+{\footnotesize\ttfamily void Dijkstra (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_customer}{Customer} \&}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_a65a9ae35388abf14abc064d0f3cae205}\label{limorton__dijkstra_8h_a65a9ae35388abf14abc064d0f3cae205}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Find\+\_\+\+Be\+\_\+\+Cust@{Find\+\_\+\+Be\+\_\+\+Cust}}
+\index{Find\+\_\+\+Be\+\_\+\+Cust@{Find\+\_\+\+Be\+\_\+\+Cust}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Find\+\_\+\+Be\+\_\+\+Cust()}{Find\_Be\_Cust()}}
+{\footnotesize\ttfamily vector$<$int$>$ Find\+\_\+\+Be\+\_\+\+Cust (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{be\+Servers }\end{DoxyParamCaption})}
+
+
+
+找到必就近设服务器的消费结点，并返回消费结点编号集合 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_afe6a51ee6d4a0aa9e1909d71510c046b}\label{limorton__dijkstra_8h_afe6a51ee6d4a0aa9e1909d71510c046b}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Find\+\_\+\+Be\+\_\+\+Node@{Find\+\_\+\+Be\+\_\+\+Node}}
+\index{Find\+\_\+\+Be\+\_\+\+Node@{Find\+\_\+\+Be\+\_\+\+Node}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Find\+\_\+\+Be\+\_\+\+Node()}{Find\_Be\_Node()}}
+{\footnotesize\ttfamily vector$<$int$>$ Find\+\_\+\+Be\+\_\+\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+找到必就近设服务器的消费结点，并返回对应连接结点编号集合 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_a910599af1f8c1ff8f4a5fddb86c37906}\label{limorton__dijkstra_8h_a910599af1f8c1ff8f4a5fddb86c37906}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Find\+\_\+\+Lonely\+\_\+\+Node@{Find\+\_\+\+Lonely\+\_\+\+Node}}
+\index{Find\+\_\+\+Lonely\+\_\+\+Node@{Find\+\_\+\+Lonely\+\_\+\+Node}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Find\+\_\+\+Lonely\+\_\+\+Node()}{Find\_Lonely\_Node()}}
+{\footnotesize\ttfamily vector$<$int$>$ Find\+\_\+\+Lonely\+\_\+\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+删除孤立结点的边，并返回孤立结点集合 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_a5fdc497b6ac1986b36ac494861e737f9}\label{limorton__dijkstra_8h_a5fdc497b6ac1986b36ac494861e737f9}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Flux\+\_\+\+Over\+\_\+\+Flow@{Flux\+\_\+\+Over\+\_\+\+Flow}}
+\index{Flux\+\_\+\+Over\+\_\+\+Flow@{Flux\+\_\+\+Over\+\_\+\+Flow}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Flux\+\_\+\+Over\+\_\+\+Flow()}{Flux\_Over\_Flow()}}
+{\footnotesize\ttfamily bool Flux\+\_\+\+Over\+\_\+\+Flow (\begin{DoxyParamCaption}\item[{int}]{custom\+Num }\end{DoxyParamCaption})}
+
+启发式：消费节点连接的网络节点的所有路径的带宽总和小于消费节点需求带宽，必是服务器结点 极端情况：\+Net -\/$>$ lonely\+Node -\/$>$ ... -\/$>$ lonely\+Node -\/$>$ cust\+Node 且该链路最小带宽小于消费结点需求 \mbox{\Hypertarget{limorton__dijkstra_8h_a1f4213f22d050d7b8836cafead983a7d}\label{limorton__dijkstra_8h_a1f4213f22d050d7b8836cafead983a7d}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!has\+Cust@{has\+Cust}}
+\index{has\+Cust@{has\+Cust}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{has\+Cust()}{hasCust()}}
+{\footnotesize\ttfamily bool has\+Cust (\begin{DoxyParamCaption}\item[{int}]{color }\end{DoxyParamCaption})}
+
+
+
+判断color的结点集合是否有服务器 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_a975e251b27f292f638e594e08a5e6db7}\label{limorton__dijkstra_8h_a975e251b27f292f638e594e08a5e6db7}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Init\+\_\+\+Global\+\_\+\+Variable@{Init\+\_\+\+Global\+\_\+\+Variable}}
+\index{Init\+\_\+\+Global\+\_\+\+Variable@{Init\+\_\+\+Global\+\_\+\+Variable}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Init\+\_\+\+Global\+\_\+\+Variable()}{Init\_Global\_Variable()}}
+{\footnotesize\ttfamily void Init\+\_\+\+Global\+\_\+\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_ab73b756a9571f83eaa1ba2679ebd0d28}\label{limorton__dijkstra_8h_ab73b756a9571f83eaa1ba2679ebd0d28}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!min\+AB@{min\+AB}}
+\index{min\+AB@{min\+AB}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{min\+A\+B()}{minAB()}}
+{\footnotesize\ttfamily int min\+AB (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_a058885b5a319f595c83afa0d4c3cdc85}\label{limorton__dijkstra_8h_a058885b5a319f595c83afa0d4c3cdc85}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Not\+Custto\+Node@{Not\+Custto\+Node}}
+\index{Not\+Custto\+Node@{Not\+Custto\+Node}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Not\+Custto\+Node()}{NotCusttoNode()}}
+{\footnotesize\ttfamily bool Not\+Custto\+Node (\begin{DoxyParamCaption}\item[{int}]{node\+Num }\end{DoxyParamCaption})}
+
+
+
+判断是否是消费结点连接的结点 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_a3d2c1c7b9f75da57d5b71fcc2c3c6bda}\label{limorton__dijkstra_8h_a3d2c1c7b9f75da57d5b71fcc2c3c6bda}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Only\+\_\+\+One\+\_\+\+Edge@{Only\+\_\+\+One\+\_\+\+Edge}}
+\index{Only\+\_\+\+One\+\_\+\+Edge@{Only\+\_\+\+One\+\_\+\+Edge}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Only\+\_\+\+One\+\_\+\+Edge()}{Only\_One\_Edge()}}
+{\footnotesize\ttfamily bool Only\+\_\+\+One\+\_\+\+Edge (\begin{DoxyParamCaption}\item[{int}]{node\+Num }\end{DoxyParamCaption})}
+
+
+
+启发式：当一个网络结点仅有一条出边，且无消费结点连接时,一定不会是服务器结点 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_a3e8b73d5ea5fbf33014295180a6291df}\label{limorton__dijkstra_8h_a3e8b73d5ea5fbf33014295180a6291df}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Paint\+\_\+\+Node@{Paint\+\_\+\+Node}}
+\index{Paint\+\_\+\+Node@{Paint\+\_\+\+Node}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Paint\+\_\+\+Node()}{Paint\_Node()}}
+{\footnotesize\ttfamily void Paint\+\_\+\+Node (\begin{DoxyParamCaption}\item[{int}]{node\+Num }\end{DoxyParamCaption})}
+
+
+
+为结点着色 
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_a2e30b637b0f5c03e43cdb05fe10a457d}\label{limorton__dijkstra_8h_a2e30b637b0f5c03e43cdb05fe10a457d}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Reset\+\_\+\+Variable@{Reset\+\_\+\+Variable}}
+\index{Reset\+\_\+\+Variable@{Reset\+\_\+\+Variable}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Reset\+\_\+\+Variable()}{Reset\_Variable()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_adc1bb62c77495116243347748bd006df}\label{limorton__dijkstra_8h_adc1bb62c77495116243347748bd006df}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!Run\+\_\+\+Dijkstra@{Run\+\_\+\+Dijkstra}}
+\index{Run\+\_\+\+Dijkstra@{Run\+\_\+\+Dijkstra}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{Run\+\_\+\+Dijkstra()}{Run\_Dijkstra()}}
+{\footnotesize\ttfamily void Run\+\_\+\+Dijkstra (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{be\+Cust\+Ser }\end{DoxyParamCaption})}
+
+
+
+\subsection{变量说明}
+\mbox{\Hypertarget{limorton__dijkstra_8h_a73002ae626d985c25366a1ba4641fcc2}\label{limorton__dijkstra_8h_a73002ae626d985c25366a1ba4641fcc2}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!flags@{flags}}
+\index{flags@{flags}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily vector$<$int$>$ flags}
+
+\mbox{\Hypertarget{limorton__dijkstra_8h_a750b5d744c39a06bfb13e6eb010e35d0}\label{limorton__dijkstra_8h_a750b5d744c39a06bfb13e6eb010e35d0}} 
+\index{limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}!index@{index}}
+\index{index@{index}!limorton\+\_\+dijkstra.\+h@{limorton\+\_\+dijkstra.\+h}}
+\subsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily int index = 0}
+

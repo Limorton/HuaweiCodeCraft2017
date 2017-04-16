@@ -1,0 +1,163 @@
+\hypertarget{limorton___m_c_m_f_8h}{}\section{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+\+M\+C\+MF.h 文件参考}
+\label{limorton___m_c_m_f_8h}\index{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+\+M\+C\+M\+F.\+h@{H\+:/\+Limorton\textquotesingle{}s Code/\+H\+U\+A\+W\+E\+I/limorton\+\_\+\+M\+C\+M\+F.\+h}}
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}limorton\+\_\+dijkstra.\+h\char`\"{}}\newline
+limorton\+\_\+\+M\+C\+M\+F.\+h 的引用(Include)关系图\+:
+% FIG 0
+此图展示该文件直接或间接的被哪些文件引用了\+:
+% FIG 1
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{limorton___m_c_m_f_8h_a8dc9dfb43ead6a84e64b9f4d6e4e018a}{Cal\+\_\+\+Servers\+Num} ()
+\begin{DoxyCompactList}\small\item\em 计算部署的服务器数量 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___m_c_m_f_8h_a7072b8b9edd4801c2e1b3777c2c63a6a}{Disp\+\_\+\+Route\+Server} ()
+\item 
+void \hyperlink{limorton___m_c_m_f_8h_a81018a1ab0b42f47bb62706eccab5ef0}{Display\+\_\+\+Route} ()
+\begin{DoxyCompactList}\small\item\em 输出某点的最短路径链路 \end{DoxyCompactList}\item 
+int \hyperlink{limorton___m_c_m_f_8h_acccbcafd970fbb5cbf9249e1ad2d5708}{Get\+\_\+\+Cust\+ID} (int to\+Node)
+\begin{DoxyCompactList}\small\item\em 获取网络结点连接的消费节点 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___m_c_m_f_8h_a356aa0d68e5cf9f96b1f54b17122d7d4}{Update\+\_\+\+Route} (int start, int endnode)
+\begin{DoxyCompactList}\small\item\em 储存路径 \end{DoxyCompactList}\item 
+void \hyperlink{limorton___m_c_m_f_8h_a68cb77f9f044b7bfc5c355ed088b7446}{Init\+\_\+\+Variables} ()
+\begin{DoxyCompactList}\small\item\em 费用每次都要初始化 \end{DoxyCompactList}\item 
+bool \hyperlink{limorton___m_c_m_f_8h_af3b824a2649ed66f6e6ede936ebe1fb1}{S\+P\+FA} (int start\+Node, int end\+Node)
+\begin{DoxyCompactList}\small\item\em S\+P\+F\+A，返回0表示无增广路 \end{DoxyCompactList}\item 
+bool \hyperlink{limorton___m_c_m_f_8h_a637464511ac224c4378569001ef14ca5}{Not\+In\+Not} (const vector$<$ int $>$ \&not\+Servers, int node)
+\item 
+void \hyperlink{limorton___m_c_m_f_8h_a5c8420d0dd721b95d76d6d06073bd274}{Check\+\_\+\+Bands} ()
+\item 
+void \hyperlink{limorton___m_c_m_f_8h_a6366481a4f5cd36e52f22d47bdcb0724}{Check\+OK} (const vector$<$ int $>$ \&Server\+Node, const vector$<$ int $>$ \&not\+Servers, const vector$<$ int $>$ \&be\+Servers)
+\begin{DoxyCompactList}\small\item\em 检查状态是否有数据错误 \end{DoxyCompactList}\item 
+bool \hyperlink{limorton___m_c_m_f_8h_a6e3fbe806a826b2aeadef7b59e1a715b}{Check\+Route} (bool last\+Time)
+\begin{DoxyCompactList}\small\item\em true\+: 无效解,放弃本次更新最优解 \end{DoxyCompactList}\item 
+int \hyperlink{limorton___m_c_m_f_8h_ae9627146a6ae967bc8c7f35d05f16d5c}{Min\+Cost\+Max\+Flow} (int start\+Node, int end\+Node)
+\begin{DoxyCompactList}\small\item\em M\+C\+MF \end{DoxyCompactList}\item 
+int \hyperlink{limorton___m_c_m_f_8h_a682c19e00d3884a8fe8ada770411d3b4}{Run\+\_\+\+M\+C\+MF} (const vector$<$ int $>$ \&Server\+Node, bool last\+Time)
+\begin{DoxyCompactList}\small\item\em 添加超级节点后运行\+M\+C\+M\+F算法 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_a8dc9dfb43ead6a84e64b9f4d6e4e018a}\label{limorton___m_c_m_f_8h_a8dc9dfb43ead6a84e64b9f4d6e4e018a}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Cal\+\_\+\+Servers\+Num@{Cal\+\_\+\+Servers\+Num}}
+\index{Cal\+\_\+\+Servers\+Num@{Cal\+\_\+\+Servers\+Num}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Cal\+\_\+\+Servers\+Num()}{Cal\_ServersNum()}}
+{\footnotesize\ttfamily int Cal\+\_\+\+Servers\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+计算部署的服务器数量 
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_a5c8420d0dd721b95d76d6d06073bd274}\label{limorton___m_c_m_f_8h_a5c8420d0dd721b95d76d6d06073bd274}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Check\+\_\+\+Bands@{Check\+\_\+\+Bands}}
+\index{Check\+\_\+\+Bands@{Check\+\_\+\+Bands}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Check\+\_\+\+Bands()}{Check\_Bands()}}
+{\footnotesize\ttfamily void Check\+\_\+\+Bands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_a6366481a4f5cd36e52f22d47bdcb0724}\label{limorton___m_c_m_f_8h_a6366481a4f5cd36e52f22d47bdcb0724}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Check\+OK@{Check\+OK}}
+\index{Check\+OK@{Check\+OK}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Check\+O\+K()}{CheckOK()}}
+{\footnotesize\ttfamily void Check\+OK (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{Server\+Node,  }\item[{const vector$<$ int $>$ \&}]{not\+Servers,  }\item[{const vector$<$ int $>$ \&}]{be\+Servers }\end{DoxyParamCaption})}
+
+
+
+检查状态是否有数据错误 
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_a6e3fbe806a826b2aeadef7b59e1a715b}\label{limorton___m_c_m_f_8h_a6e3fbe806a826b2aeadef7b59e1a715b}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Check\+Route@{Check\+Route}}
+\index{Check\+Route@{Check\+Route}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Check\+Route()}{CheckRoute()}}
+{\footnotesize\ttfamily bool Check\+Route (\begin{DoxyParamCaption}\item[{bool}]{last\+Time }\end{DoxyParamCaption})}
+
+
+
+true\+: 无效解,放弃本次更新最优解 
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_a7072b8b9edd4801c2e1b3777c2c63a6a}\label{limorton___m_c_m_f_8h_a7072b8b9edd4801c2e1b3777c2c63a6a}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Disp\+\_\+\+Route\+Server@{Disp\+\_\+\+Route\+Server}}
+\index{Disp\+\_\+\+Route\+Server@{Disp\+\_\+\+Route\+Server}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Disp\+\_\+\+Route\+Server()}{Disp\_RouteServer()}}
+{\footnotesize\ttfamily void Disp\+\_\+\+Route\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_a81018a1ab0b42f47bb62706eccab5ef0}\label{limorton___m_c_m_f_8h_a81018a1ab0b42f47bb62706eccab5ef0}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Display\+\_\+\+Route@{Display\+\_\+\+Route}}
+\index{Display\+\_\+\+Route@{Display\+\_\+\+Route}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Display\+\_\+\+Route()}{Display\_Route()}}
+{\footnotesize\ttfamily void Display\+\_\+\+Route (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+输出某点的最短路径链路 
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_acccbcafd970fbb5cbf9249e1ad2d5708}\label{limorton___m_c_m_f_8h_acccbcafd970fbb5cbf9249e1ad2d5708}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Get\+\_\+\+Cust\+ID@{Get\+\_\+\+Cust\+ID}}
+\index{Get\+\_\+\+Cust\+ID@{Get\+\_\+\+Cust\+ID}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+Cust\+I\+D()}{Get\_CustID()}}
+{\footnotesize\ttfamily int Get\+\_\+\+Cust\+ID (\begin{DoxyParamCaption}\item[{int}]{to\+Node }\end{DoxyParamCaption})}
+
+
+
+获取网络结点连接的消费节点 
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_a68cb77f9f044b7bfc5c355ed088b7446}\label{limorton___m_c_m_f_8h_a68cb77f9f044b7bfc5c355ed088b7446}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Init\+\_\+\+Variables@{Init\+\_\+\+Variables}}
+\index{Init\+\_\+\+Variables@{Init\+\_\+\+Variables}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Init\+\_\+\+Variables()}{Init\_Variables()}}
+{\footnotesize\ttfamily void Init\+\_\+\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+费用每次都要初始化 
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_ae9627146a6ae967bc8c7f35d05f16d5c}\label{limorton___m_c_m_f_8h_ae9627146a6ae967bc8c7f35d05f16d5c}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Min\+Cost\+Max\+Flow@{Min\+Cost\+Max\+Flow}}
+\index{Min\+Cost\+Max\+Flow@{Min\+Cost\+Max\+Flow}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Min\+Cost\+Max\+Flow()}{MinCostMaxFlow()}}
+{\footnotesize\ttfamily int Min\+Cost\+Max\+Flow (\begin{DoxyParamCaption}\item[{int}]{start\+Node,  }\item[{int}]{end\+Node }\end{DoxyParamCaption})}
+
+
+
+M\+C\+MF 
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_a637464511ac224c4378569001ef14ca5}\label{limorton___m_c_m_f_8h_a637464511ac224c4378569001ef14ca5}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Not\+In\+Not@{Not\+In\+Not}}
+\index{Not\+In\+Not@{Not\+In\+Not}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Not\+In\+Not()}{NotInNot()}}
+{\footnotesize\ttfamily bool Not\+In\+Not (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{not\+Servers,  }\item[{int}]{node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_a682c19e00d3884a8fe8ada770411d3b4}\label{limorton___m_c_m_f_8h_a682c19e00d3884a8fe8ada770411d3b4}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Run\+\_\+\+M\+C\+MF@{Run\+\_\+\+M\+C\+MF}}
+\index{Run\+\_\+\+M\+C\+MF@{Run\+\_\+\+M\+C\+MF}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Run\+\_\+\+M\+C\+M\+F()}{Run\_MCMF()}}
+{\footnotesize\ttfamily int Run\+\_\+\+M\+C\+MF (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{Server\+Node,  }\item[{bool}]{last\+Time }\end{DoxyParamCaption})}
+
+
+
+添加超级节点后运行\+M\+C\+M\+F算法 
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_af3b824a2649ed66f6e6ede936ebe1fb1}\label{limorton___m_c_m_f_8h_af3b824a2649ed66f6e6ede936ebe1fb1}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!S\+P\+FA@{S\+P\+FA}}
+\index{S\+P\+FA@{S\+P\+FA}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{S\+P\+F\+A()}{SPFA()}}
+{\footnotesize\ttfamily bool S\+P\+FA (\begin{DoxyParamCaption}\item[{int}]{start\+Node,  }\item[{int}]{end\+Node }\end{DoxyParamCaption})}
+
+
+
+S\+P\+F\+A，返回0表示无增广路 
+
+\mbox{\Hypertarget{limorton___m_c_m_f_8h_a356aa0d68e5cf9f96b1f54b17122d7d4}\label{limorton___m_c_m_f_8h_a356aa0d68e5cf9f96b1f54b17122d7d4}} 
+\index{limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}!Update\+\_\+\+Route@{Update\+\_\+\+Route}}
+\index{Update\+\_\+\+Route@{Update\+\_\+\+Route}!limorton\+\_\+\+M\+C\+M\+F.\+h@{limorton\+\_\+\+M\+C\+M\+F.\+h}}
+\subsubsection{\texorpdfstring{Update\+\_\+\+Route()}{Update\_Route()}}
+{\footnotesize\ttfamily void Update\+\_\+\+Route (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{endnode }\end{DoxyParamCaption})}
+
+
+
+储存路径 
+
