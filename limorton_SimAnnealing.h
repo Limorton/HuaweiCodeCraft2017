@@ -1,3 +1,9 @@
+/*********************************************************************************************
+Copyright: Limorton
+Author: Limorton
+Date: 2017-03-26-16.29
+Description: 模拟退火算法
+*********************************************************************************************/
 #ifndef LIMORTON_SIMANNEALING_H_INCLUDED
 #define LIMORTON_SIMANNEALING_H_INCLUDED
 #include "limorton_MCMF.h"
@@ -30,7 +36,6 @@ static double T_0;
 static double ALPHA_SA;
 static double BETA_SA;      //回温因子
 static double Kb;
-
 static double BETA_pMinSA;    //选l邻近最小minSA的概率因子
 
 static int STEP_U;
@@ -60,6 +65,8 @@ static double P_pickMinSA;
 
 static int maxVisitedState;
 /**************************************************************************/
+/** \brief 模拟退火算法全局参数结构体
+ */
 struct AnnealParm{
     double Temperature;      //温度,越高，接受”坏解“的能力越强
     int GlbBestFx;           //全局最优解
@@ -192,7 +199,11 @@ void Set_Senior(){
     #endif // Lim_Debug
 }
 /****************************************************/
-///计算仍未访问过的结点的数量
+/** \brief
+ *  计算仍未访问过的结点的数量
+ * \return int--仍未访问过的结点的数量
+ *
+ */
 int CountNotVisited(){
     int countNum = 0;
     for(int i = 0; i < graph.nodeNum; ++i){
@@ -203,6 +214,12 @@ int CountNotVisited(){
 }
 
 #if Lim_Debug
+/** \brief
+ *  输出显示服务器结点位置
+ * \param vec const vector<int>&--服务器结点集合
+ * \return void
+ *
+ */
 void DisPlayPos(const vector<int>& vec){
     int vecSize = vec.size();
     cout << "#OServer at:" << endl;
@@ -214,34 +231,12 @@ void DisPlayPos(const vector<int>& vec){
 }
 #endif // Lim_Debug
 
-#if Lim_Debug
-void DisPlayPos01(const vector<int>& vec){
-    int vecSize = vec.size();
-    cout << "#Server at:" << endl;
-    for(int i = 0; i < vecSize; ++i){
-        cout<< "(" << i << ", " << vec[i] << ")";
-    }
-    cout << endl;
-}
-#endif // Lim_Debug
-
-///求2的n次幂：STL--- pow(2, n);
-int pow2n(int n){
-    int ans = 1;
-    while(--n)
-        ans *=2;
-    return 2 * ans;
-}
-///vector<int> 转 int
-int toInt(const vector<int>& vec){
-    int sum = 0;
-    for(unsigned int i = 0; i < vec.size(); ++i){
-        if(vec[i] == 1)
-            sum += pow2n(vec.size() - i - 1);
-    }
-    return sum;
-}
-///vector<int> 转 string
+/** \brief
+ *  vector<int> 转 string
+ * \param vec const vector<int>&--vector<int>数组
+ * \return string
+ *
+ */
 string vecToString(const vector<int>& vec){
     string str, str_temp;
     str.resize(vec.size());
@@ -252,7 +247,12 @@ string vecToString(const vector<int>& vec){
     return str;
 }
 
-///初始解空间
+/** \brief
+ *  初始化解空间
+ * \param startState const vector<int>&--初始服务器位置状态
+ * \return void
+ *
+ */
 void Init_AnsSpace(const vector<int>& startState){
     SAParms.Temperature = T_0;
     SAParms.OldPos.assign(graph.nodeNum, 0);
@@ -267,7 +267,13 @@ void Init_AnsSpace(const vector<int>& startState){
     SAParms.PreGlbPos = SAParms.GlbBestPos;
 }
 
-///状态产生函数1: stepU个结点移动一位
+/** \brief
+ *  状态产生函数1: stepU个结点移动一位
+ * \param notServers const vector<int>&
+ * \param beServers const vector<int>&
+ * \return int
+ *
+ */
 int NewState1(const vector<int>& notServers, const vector<int>& beServers){
     int beNum = beServers.size();
     for(int i = 0; i < beNum; ++i){
@@ -353,7 +359,14 @@ int NewState1(const vector<int>& notServers, const vector<int>& beServers){
     }
     return 0;
 }
-///状态产生函数2: 一个结点移动stepU位
+
+/** \brief
+ *  状态产生函数2: 一个结点移动stepU位
+ * \param notServers const vector<int>&
+ * \param beServers const vector<int>&
+ * \return int
+ *
+ */
 int NewState2(const vector<int>& notServers, const vector<int>& beServers){
     int beNum = beServers.size();
     for(int i = 0; i < beNum; ++i){
@@ -457,7 +470,13 @@ int NewState2(const vector<int>& notServers, const vector<int>& beServers){
         return 0;
 }
 
-///状态产生函数3: 多个结点移动stepU位
+/** \brief
+ *  状态产生函数3: 多个结点移动stepU位
+ * \param notServers const vector<int>&
+ * \param beServers const vector<int>&
+ * \return int
+ *
+ */
 int NewState3(const vector<int>& notServers, const vector<int>& beServers){
     int beNum = beServers.size();
     for(int i = 0; i < beNum; ++i){
@@ -563,7 +582,18 @@ int NewState3(const vector<int>& notServers, const vector<int>& beServers){
         return 0;
 }
 
-///单次模拟退火
+/** \brief
+ *  单次模拟退火
+ * \param stepU int--步数
+ * \param stayMax int--外循环总最大最优解不变步数
+ * \param loop int--内循环次数
+ * \param t_start int--初始温度
+ * \param pick_start double--选邻近最优解概率
+ * \param changeKind int--状态产生函数类型
+ * \param changeNum int--状态产生函数3的参数
+ * \return void
+ *
+ */
 void OneSA(int stepU, int stayMax, int loop, int t_start, double pick_start, int changeKind, int changeNum){
     steps = 0;
     stays_loc = 0;
@@ -685,7 +715,12 @@ void OneSA(int stepU, int stayMax, int loop, int t_start, double pick_start, int
     }
 }
 
-///SA过程
+/** \brief
+ *  SA过程
+ * \param startState const vector<int>&--初始状态
+ * \return void
+ *
+ */
 void SimAnneal(const vector<int>& startState){
     srand(time(0));
     #if Lim_Debug

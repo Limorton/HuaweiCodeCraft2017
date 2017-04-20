@@ -29,7 +29,8 @@ typedef int RentType;       //单位带宽租用费类型
 typedef int CustomerType;   //消费结点编号类型
 typedef int NeedType;       //消费结点需求类型
 
-///边结构
+/** \brief 边结构
+ */
 struct EdgeNode{
     NodeType headID;    //本条边的头结点
     NodeType tailID;    //本条边的尾结点
@@ -42,7 +43,8 @@ struct EdgeNode{
     EdgeNode *vexIn;    //指向尾节点相同的下条边
 };
 
-///结点结构
+/** \brief 结点结构
+ */
 struct VertexNode{
     NodeType nodeID;      //网络结点编号，结点最多有1000个
 
@@ -58,7 +60,8 @@ struct VertexNode{
     EdgeNode* outEdgeTails; //后继结点链表
 };
 
-///消费节点
+/** \brief 消费节点
+ */
 struct Customer{
     CustomerType customerID;    //消费结点编号，不超过500个
     NodeType toNodeID;      //连接的网络结点标号
@@ -67,13 +70,8 @@ struct Customer{
     bool inPairs;           //已配对
 };
 
-///图的评估结构体
-struct Evaluater{
-    int node_cust_rate;     //网络消费结点比，评价一个消费结点平均能分到几个网络结点，假设均匀分布，可近似看作消费结点间平均距离
-    int server_rent_rate;    //单位服务器等效1Gps带宽的路径距离
-};
-
-///全图结构
+/** \brief 全图结构
+ */
 struct VideoNetGraph{
     int nodeNum;
     int edgeNum;
@@ -91,35 +89,115 @@ struct VideoNetGraph{
 
 extern VideoNetGraph graph;
 
-///输出显示结点i的出边
+/** \brief
+ *  输出显示结点i的出边
+ * \param i int
+ * \return void
+ *
+ */
 void Print_Edges(int i);
-///初始拓扑图
+/** \brief
+ *  初始拓扑图
+ * \param topo char**--输入文件
+ * \return void
+ *
+ */
 void Init_Graph(char** topo);
-///添加一条边
+/** \brief
+ *  向图中添加一条边
+ * \param head int--头节点
+ * \param tail int--尾结点
+ * \param band int--带宽
+ * \param r_band int--剩余带宽
+ * \param rent int--租金
+ * \return void
+ *
+ */
 void Add_OneEdge(int head, int tail, int band, int r_band, int rent);
-///删除一条边
+/** \brief
+ *  从图中删除一条边
+ * \param head int--头节点
+ * \param tail int--尾结点
+ * \return void
+ *
+ */
 void Delete_OneEdge(int head, int tail);
-///添加超级源边
+/** \brief
+ *  添加超级源边
+ * \param ServerNode const vector<int>&--设置服务器的结点集合
+ * \return void
+ *
+ */
 void Add_SuperSourceNodeEdge(const vector<int>& ServerNode);
-///删除超级源边
+/** \brief
+ *  删除超级源边
+ * \param ServerNode const vector<int>&--设置服务器的结点集合
+ * \return void
+ *
+ */
 void Destory_SuperSourceNodeEdge(const vector<int>& ServerNode);
-///添加超级汇边
+/** \brief
+ *  添加超级汇边
+ * \return void
+ *
+ */
 void Add_SuperEndNodeEdge();
-///删除超级汇边
+/** \brief
+ *  删除超级汇边
+ * \return void
+ *
+ */
 void Destory_SuperEndNodeEdge();
-///生成拓扑图
+/** \brief
+ *  生成拓扑图
+ * \param topo char**--输入文件
+ * \return void
+ *
+ */
 void Create_Graph(char** topo);
-///删除拓扑图空间
+/** \brief
+ *  删除拓扑图空间
+ * \return void
+ *
+ */
 void Destory_Graph();
-///显示拓扑图
+/** \brief
+ *  显示拓扑图
+ * \return void
+ *
+ */
 void Print_Graph();
-///返回边的已用带宽
+/** \brief
+ *  返回边的已用带宽
+ * \param i int--头节点
+ * \param j int--尾结点
+ * \return int--已用带宽
+ *
+ */
 int Check_Edge(int i, int j);
-///返回边的剩余带宽
+/** \brief
+ *  返回边的剩余带宽
+ * \param i int--头节点
+ * \param j int--尾结点
+ * \return int--边的剩余带宽
+ *
+ */
 int Check_Band(int i, int j);
-///返回边的初始带宽
+/** \brief
+ *  返回边的初始带宽
+ * \param i int--头节点
+ * \param j int--尾结点
+ * \return int--边的初始带宽
+ *
+ */
 int Get_Band(int i, int j);
-///返回边的租金
+/** \brief
+ *  返回边的租金
+ * \param i int--头节点
+ * \param j int--尾结点
+ * \return int--边租金
+ *
+ */
 int Get_Rent(int i, int j);
 
 #endif // LIMORTON_GRAPH_H_INCLUDED

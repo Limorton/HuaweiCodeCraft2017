@@ -1,13 +1,19 @@
-﻿#ifndef LIMORTON_DIJKSTRA_H_INCLUDED
+/*********************************************************************************************
+Copyright: Limorton
+Author: Limorton
+Date: 2017-03-20-16.27
+Description: 实现以下功能
+    1、dijkstra算法求单源最短路径
+    2、用Tarjan算法求图的割边
+*********************************************************************************************/
+#ifndef LIMORTON_DIJKSTRA_H_INCLUDED
 #define LIMORTON_DIJKSTRA_H_INCLUDED
-
 #include "limorton_Graph.h"
 #include <vector>
 #include <iostream>
 #include <sstream>
 #include <queue>
 #include <algorithm>
-
 using namespace std;
 
 static vector<int> notServers;
@@ -38,10 +44,23 @@ struct cmp2node{
     }
 };
 
+/** \brief
+ *  比较两个数大小
+ * \param a int
+ * \param b int
+ * \return int
+ *
+ */
 int minAB(int a, int b){
     return a < b ? a : b;
 }
-///用Tarjan算法求图的割边
+/** \brief
+ *  用Tarjan算法求图的割边
+ * \param cur int--边的头节点
+ * \param father int--边的尾结点
+ * \return void
+ *
+ */
 void Dfs_CutEdge(int cur, int father){
     index++;
     num[cur] = index;   //当前顶点的时间戳
@@ -64,7 +83,11 @@ void Dfs_CutEdge(int cur, int father){
     }
 }
 
-
+/** \brief
+ *  初始化全局变量
+ * \return void
+ *
+ */
 void Init_Global_Variable(){
     min_path initP = {MY_INT_MAX, MY_INT_MAX};
     minPath.resize(graph.nodeNum, initP);
@@ -79,6 +102,11 @@ void Init_Global_Variable(){
     }
 }
 
+/** \brief
+ *  恢复变量
+ * \return void
+ *
+ */
 void Reset_Variable(){
     for(int i = 0; i < graph.nodeNum; ++i){
         minPath[i].rent = MY_INT_MAX;
@@ -88,6 +116,12 @@ void Reset_Variable(){
     }
 }
 
+/** \brief
+ *  Dijkstra算法求各网络结点到消费结点的最低租金路径
+ * \param start const Customer&--消费结点编号
+ * \return void
+ *
+ */
 void Dijkstra(const Customer& start){
     priority_queue<VertexNode, vector<VertexNode>, cmp2node> S;
     VertexNode u;
@@ -132,6 +166,12 @@ void Dijkstra(const Customer& start){
     #endif // 0
 }
 
+/** \brief
+ *  运行Dijkstra算法
+ * \param beCustSer const vector<int>&--必设服务器结点的网络结点
+ * \return void
+ *
+ */
 void Run_Dijkstra(const vector<int>& beCustSer){
     Init_Global_Variable();
     for(int i = 0; i < graph.custNum; ++i){
@@ -152,7 +192,12 @@ void Run_Dijkstra(const vector<int>& beCustSer){
     #endif // Lim_Debug
 }
 
-///判断是否是消费结点连接的结点
+/** \brief
+ *  判断nodeNum是否是消费结点连接的结点
+ * \param nodeNum int--网络结点编号
+ * \return bool--不是返回true 是返回false
+ *
+ */
 bool NotCusttoNode(int nodeNum){
     for(int i = 0; i < graph.custNum; ++i)
         if(nodeNum == graph.customerInfo[i].toNodeID)
@@ -160,7 +205,12 @@ bool NotCusttoNode(int nodeNum){
     return true;
 }
 
-///求附近已设置服务器的结点的数量
+/** \brief
+ *  求邻近的已设置服务器的结点的数量
+ * \param nodeNum int--网络结点编号
+ * \return int--邻近的已设置服务器的结点的数量
+ *
+ */
 int CountNearServer(int nodeNum){
     int servNum = 0;
     EdgeNode *p = graph.adjList[nodeNum].outEdgeTails;
@@ -172,7 +222,12 @@ int CountNearServer(int nodeNum){
     return servNum;
 }
 
-///由网络节点求其连接的消费结点
+/** \brief
+ *  由网络节点求其连接的消费结点
+ * \param nodeNum int--网络结点编号
+ * \return int--对应消费结点编号
+ *
+ */
 int Cust_Connect(int nodeNum){
     for(int i = 0; i < graph.custNum; ++i)
         if(nodeNum == graph.customerInfo[i].toNodeID)
@@ -180,20 +235,34 @@ int Cust_Connect(int nodeNum){
     return -1;
 }
 
-///启发式：当一个网络结点仅有一条出边，且无消费结点连接时,一定不会是服务器结点
+/** \brief
+ *  启发式：当一个网络结点仅有一条出边，且无消费结点连接时,一定不会是服务器结点
+ * \param nodeNum int--网络结点编号
+ * \return bool--必不是服务器结点返回true
+ *
+ */
 bool Only_One_Edge(int nodeNum){
     return (((graph.adjList[nodeNum].edgeAttached == 1) && \
              NotCusttoNode(nodeNum))? true : false);
 }
 
-///启发式：消费节点连接的网络节点的所有路径的带宽总和小于消费节点需求带宽，必是服务器结点
-///极端情况：Net -> lonelyNode -> ... -> lonelyNode -> custNode 且该链路最小带宽小于消费结点需求
+/** \brief
+ *  启发式：消费节点连接的网络节点的所有路径的带宽总和小于消费节点需求带宽，必是服务器结点
+ * \param customNum int--消费结点编号
+ * \return bool--必是服务器结点返回true
+ *  极端情况：Net -> lonelyNode -> ... -> lonelyNode -> custNode 且该链路最小带宽小于消费结点需求
+ */
 bool Flux_Over_Flow(int customNum){
     return (graph.adjList[graph.customerInfo[customNum].toNodeID].maxFlux \
             < graph.customerInfo[customNum].bandNeed) ? true : false;
 }
 
-///启发式：需求不超带宽的前提下，可能的最小流量花销大于单个服务器安装费用
+/** \brief
+ *  启发式：需求不超带宽的前提下，可能的最小流量花销大于单个服务器安装费用
+ * \param custNum int--消费结点编号
+ * \return bool--必是服务器结点返回true
+ *
+ */
 bool Cost_Bigger_Node(int custNum){
     //贪心计算可能的最小流量花费
     EdgeNode *p;
@@ -242,7 +311,12 @@ bool Cost_Bigger_Node(int custNum){
     return (sumCost >= graph.serverCost) ? true : false;
 }
 
-///为结点着色
+/** \brief
+ *  为结点着色
+ * \param nodeNum int--网络结点编号
+ * \return void
+ *  用于求割边
+ */
 void Paint_Node(int nodeNum){
     EdgeNode *p = graph.adjList[nodeNum].outEdgeTails;
     while(p){
@@ -254,7 +328,12 @@ void Paint_Node(int nodeNum){
     }
 }
 
-///判断color的结点集合是否有服务器
+/** \brief
+ *  判断color的结点集合是否有消费结点
+ * \param color int--颜色标识
+ * \return bool--有消费结点返回true
+ *
+ */
 bool hasCust(int color){
     bool hasCust = false;
     for(int i = 0; i < graph.nodeNum; ++i){
@@ -266,7 +345,11 @@ bool hasCust(int color){
     return hasCust;
 }
 
-///删除孤立结点的边，并返回孤立结点集合
+/** \brief
+ *  删除孤立结点连接的边，并返回孤立结点集合
+ * \return vector<int>--孤立结点集合
+ *
+ */
 vector<int> Find_Lonely_Node(){
     vector<int> lonlyNodes;
     int stillHave = 1;
@@ -335,7 +418,11 @@ vector<int> Find_Lonely_Node(){
     return lonlyNodes;
 }
 
-///找到必就近设服务器的消费结点，并返回对应连接结点编号集合
+/** \brief
+ *  找到必就近设服务器的消费结点，并返回对应连接结点编号集合
+ * \return vector<int>--必就近设服务器的消费结点连接结点的编号集合
+ *
+ */
 vector<int> Find_Be_Node(){
     vector<int> mustBeID;
     for(int i = 0; i < graph.custNum; ++i){
@@ -348,7 +435,13 @@ vector<int> Find_Be_Node(){
     }
     return mustBeID;
 }
-///找到必就近设服务器的消费结点，并返回消费结点编号集合
+
+/** \brief
+ *  找到必就近设服务器的消费结点，并返回消费结点编号集合
+ * \param beServers const vector<int>&--必就近设服务器的消费结点连接结点的编号集合
+ * \return vector<int>--必就近设服务器的消费结点的编号集合
+ *
+ */
 vector<int> Find_Be_Cust(const vector<int>& beServers){
     vector<int> mustBeID(graph.custNum, 0);
     int beSize = beServers.size();

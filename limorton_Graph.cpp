@@ -9,7 +9,12 @@ using namespace std;
 
 VideoNetGraph graph;
 
-///输出显示结点i的出边
+/** \brief
+ *  输出显示结点i的出边
+ * \param i int
+ * \return void
+ *
+ */
 void Print_Edges(int i){
     cout << graph.adjList[i].nodeID << "--out--(" << graph.adjList[i].edgeAttached << "," << graph.adjList[i].maxFlux << ")" << "-->";
     EdgeNode *p = graph.adjList[i].outEdgeTails;
@@ -28,7 +33,12 @@ void Print_Edges(int i){
 }
 
 
-///初始拓扑图
+/** \brief
+ *  初始拓扑图
+ * \param topo char**--输入文件
+ * \return void
+ *
+ */
 void Init_Graph(char** topo){
     //获取基本信息
     stringstream inStream;
@@ -43,7 +53,16 @@ void Init_Graph(char** topo){
     graph.dirCost = graph.serverCost * graph.custNum;
 }
 
-///添加一条边
+/** \brief
+ *  向图中添加一条边
+ * \param head int--头节点
+ * \param tail int--尾结点
+ * \param band int--带宽
+ * \param r_band int--剩余带宽
+ * \param rent int--租金
+ * \return void
+ *
+ */
 void Add_OneEdge(int head, int tail, int band, int r_band, int rent){
     EdgeNode* pEdge = new EdgeNode;
     pEdge ->headID = head;
@@ -79,7 +98,13 @@ void Add_OneEdge(int head, int tail, int band, int r_band, int rent){
     }
 }
 
-///删除一条边
+/** \brief
+ *  从图中删除一条边
+ * \param head int--头节点
+ * \param tail int--尾结点
+ * \return void
+ *
+ */
 void Delete_OneEdge(int head, int tail){
     EdgeNode *p, *q;
     //修改head的出弧链表
@@ -134,8 +159,12 @@ void Delete_OneEdge(int head, int tail){
     }
 }
 
-///添加超级源边
-void Add_SuperSourceNodeEdge(const vector<int>& ServerNode){
+/** \brief
+ *  添加超级源边
+ * \param ServerNode const vector<int>&--设置服务器的结点集合
+ * \return void
+ *
+ */void Add_SuperSourceNodeEdge(const vector<int>& ServerNode){
     int servNum = ServerNode.size();
     for(int i = 0; i < servNum; ++i){
         if(ServerNode[i] == 1 || ServerNode[i] == 2){
@@ -145,8 +174,12 @@ void Add_SuperSourceNodeEdge(const vector<int>& ServerNode){
     }
 }
 
-///删除超级源边
-void Destory_SuperSourceNodeEdge(const vector<int>& ServerNode){
+/** \brief
+ *  删除超级源边
+ * \param ServerNode const vector<int>&--设置服务器的结点集合
+ * \return void
+ *
+ */void Destory_SuperSourceNodeEdge(const vector<int>& ServerNode){
     int servNum = ServerNode.size();
     for(int i = 0; i < servNum; ++i){
         if(ServerNode[i] == 1 || ServerNode[i] == 2){
@@ -156,23 +189,35 @@ void Destory_SuperSourceNodeEdge(const vector<int>& ServerNode){
     }
 }
 
-///添加超级汇边
-void Add_SuperEndNodeEdge(){
+/** \brief
+ *  添加超级汇边
+ * \return void
+ *
+ */
+ void Add_SuperEndNodeEdge(){
     for(int i = 0; i < graph.custNum; ++i){
         Add_OneEdge(graph.nodeNum + 1, graph.customerInfo[i].toNodeID, graph.customerInfo[i].bandNeed, graph.customerInfo[i].bandNeed, 0);
         Add_OneEdge(graph.customerInfo[i].toNodeID, graph.nodeNum + 1, graph.customerInfo[i].bandNeed, graph.customerInfo[i].bandNeed, 0);
     }
 }
 
-///删除超级汇边
+/** \brief
+ *  删除超级汇边
+ * \return void
+ *
+ */
 void Destory_SuperEndNodeEdge(){
     for(int i = 0; i < graph.custNum; ++i){
         Delete_OneEdge(graph.nodeNum + 1, graph.customerInfo[i].toNodeID);
         Delete_OneEdge(graph.customerInfo[i].toNodeID, graph.nodeNum + 1);
     }
 }
-
-///生成拓扑图
+/** \brief
+ *  生成拓扑图
+ * \param topo char**--输入文件
+ * \return void
+ *
+ */
 void Create_Graph(char** topo){
     //初始化网络节点表头
     for(int i = 0; i < graph.nodeNum; ++i){
@@ -296,7 +341,11 @@ void Create_Graph(char** topo){
     graph.avgNeed = sumNeed / graph.custNum;
 }
 
-///删除拓扑图空间
+/** \brief
+ *  删除拓扑图空间
+ * \return void
+ *
+ */
 void Destory_Graph(){
     for(int i = 0; i < graph.nodeNum + 2; ++i){
         EdgeNode *p = graph.adjList[i].outEdgeTails;
@@ -313,7 +362,11 @@ void Destory_Graph(){
     //print_time("Destory Finish:");
 }
 
-///显示拓扑图
+/** \brief
+ *  显示拓扑图
+ * \return void
+ *
+ */
 void Print_Graph(){
     cout << "----Print Nodes and Edges--------------------------" << endl;
     for(int i = 0; i < graph.nodeNum + 2; ++i){
@@ -343,52 +396,75 @@ void Print_Graph(){
     cout << "--serverCost is " << graph.serverCost << endl;
     cout << "----End Print N&E----" << endl << endl;
 }
-
-///返回边的已用带宽
+/** \brief
+ *  返回边的已用带宽
+ * \param i int--头节点
+ * \param j int--尾结点
+ * \return int--已用带宽
+ *
+ */
 int Check_Edge(int i, int j){
     EdgeNode *p = graph.adjList[i].outEdgeTails;
     while(p -> tailID != j){
         p = p ->vexOut;
     }
     if(!p){ //不存在该边
-        return -123;
+        return -1;
     }
     //cout << "Can find edge from " << p ->headID << "to" << p ->tailID << endl;
     return (p ->bandWidth - p ->rest_bandWidth);
 }
 
-///返回边的剩余带宽
+/** \brief
+ *  返回边的剩余带宽
+ * \param i int--头节点
+ * \param j int--尾结点
+ * \return int--边的剩余带宽
+ *
+ */
 int Check_Band(int i, int j){
     EdgeNode *p = graph.adjList[i].outEdgeTails;
     while(p -> tailID != j){
         p = p ->vexOut;
     }
     if(!p){ //不存在该边
-        return -123;
+        return -1;
     }
     return p ->rest_bandWidth;
 }
 
-///返回边的初始带宽
+/** \brief
+ *  返回边的初始带宽
+ * \param i int--头节点
+ * \param j int--尾结点
+ * \return int--边的初始带宽
+ *
+ */
 int Get_Band(int i, int j){
     EdgeNode *p = graph.adjList[i].outEdgeTails;
     while(p -> tailID != j){
         p = p ->vexOut;
     }
     if(!p){ //不存在该边
-        return -123;
+        return -1;
     }
     return p ->bandWidth;
 }
 
-///返回边的租金
+/** \brief
+ *  返回边的租金
+ * \param i int--头节点
+ * \param j int--尾结点
+ * \return int--边租金
+ *
+ */
 int Get_Rent(int i, int j){
     EdgeNode *p = graph.adjList[i].outEdgeTails;
     while(p -> tailID != j){
         p = p ->vexOut;
     }
     if(!p){ //不存在该边
-        return -123;
+        return -1;
     }
     return p ->Rental;
 }
