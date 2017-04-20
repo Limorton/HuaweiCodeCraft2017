@@ -5,6 +5,7 @@ Date: 2017-03-20-16.27
 Description: 实现以下功能
     1、dijkstra算法求单源最短路径
     2、用Tarjan算法求图的割边
+    3、缩减服务器设置范围的启发式处理
 *********************************************************************************************/
 #ifndef LIMORTON_DIJKSTRA_H_INCLUDED
 #define LIMORTON_DIJKSTRA_H_INCLUDED
