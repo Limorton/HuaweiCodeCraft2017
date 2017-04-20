@@ -36,7 +36,9 @@ static vector<min_path> minPath;
 static vector<int> inSetS;
 static vector<vector<min_path> > Min_Sum_Rent;  //距离数组
 
-///比较两条链路租金，找较小的
+/** \brief
+ *  比较两条链路租金，找较小的
+ */
 struct cmp2node{
     bool operator()(const VertexNode& A, const VertexNode& B){
         return A.sum_rent > B.sum_rent;   //最小值优先
